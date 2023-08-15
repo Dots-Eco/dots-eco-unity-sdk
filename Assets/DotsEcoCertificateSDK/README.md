@@ -7,8 +7,6 @@ The SDK makes it easier to integrate Dots.eco certificates into your Unity proje
 * [Get a Certificate](https://docs.impact.dots.eco/endpoints/singleCertificate/) get certificate information
 * [Count impact for a user] (TODO)
 
-[Learn more about supported features →](#Features)
-
 To start with the SDK, you need to obtain your authentication and app tokens from your [Dots.eco Admin Page](https://impact.dots.eco/manage/).
 
 ### Authentication
