@@ -26,6 +26,12 @@
 # Visual Studio cache directory
 .vs/
 
+<<<<<<< HEAD
+=======
+# Visual Studio Code directory
+.vscode/
+
+>>>>>>> ffbd852 (initial commit)
 # Gradle cache directory
 .gradle/
 
