@@ -1,10 +1,13 @@
-﻿public static class Constants
+﻿namespace DotsEcoCertificateSDK
 {
-    public const string BaseUrl = "https://impact.dots.eco/";
+    public static class Constants
+    {
+        public const string BaseUrl = "https://impact.dots.eco/";
 
-    public static string ContentType = "application/json";
+        public static string ContentType = "application/json";
 
-    public static string GetUrlPath = BaseUrl + "api/v1/certificate/{0}";
+        public static string GetUrlPath = BaseUrl + "api/v1/certificate/{0}";
 
-    public static string CreateUrlPath = BaseUrl + "api/v1/certificate/add";
+        public static string CreateUrlPath = BaseUrl + "api/v1/certificate/add";
+    }
 }

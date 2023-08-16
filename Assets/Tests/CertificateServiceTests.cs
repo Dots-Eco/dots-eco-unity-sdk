@@ -1,31 +1,34 @@
 ﻿using NUnit.Framework;
 
-public class CertificateServiceTests
+namespace DotsEcoCertificateSDK
 {
-    private CertificateService certificateService;
-    private const string testAuthToken = "test-auth-token";
-
-    [SetUp]
-    public void Setup()
+    public class CertificateServiceTests
     {
-        certificateService = new CertificateService(testAuthToken);
-    }
+        private CertificateService certificateService;
+        private const string testAuthToken = "test-auth-token";
 
-    [Test]
-    public void GetCertificateRequest_ValidInputs_CorrectlySetsAuthToken()
-    {
-        var request = certificateService.GetCertificateRequest("test-app-token", "test-certificate-id");
+        [SetUp]
+        public void Setup()
+        {
+            certificateService = new CertificateService(testAuthToken);
+        }
 
-        Assert.IsNotNull(request);
-        Assert.AreEqual(testAuthToken, request.GetRequestHeader("auth-token"));
-    }
+        [Test]
+        public void GetCertificateRequest_ValidInputs_CorrectlySetsAuthToken()
+        {
+            var request = certificateService.GetCertificateRequest("test-app-token", "test-certificate-id");
 
-    [Test]
-    public void CreateCertificateRequest_ValidInputs_CorrectlySetsAuthToken()
-    {
-        var request = certificateService.CreateCertificateRequest("test-app-token", 10, 5, "ezbz");
+            Assert.IsNotNull(request);
+            Assert.AreEqual(testAuthToken, request.GetRequestHeader("auth-token"));
+        }
 
-        Assert.IsNotNull(request);
-        Assert.AreEqual(testAuthToken, request.GetRequestHeader("auth-token"));
+        [Test]
+        public void CreateCertificateRequest_ValidInputs_CorrectlySetsAuthToken()
+        {
+            var request = certificateService.CreateCertificateRequest("test-app-token", 10, 5, "ezbz");
+
+            Assert.IsNotNull(request);
+            Assert.AreEqual(testAuthToken, request.GetRequestHeader("auth-token"));
+        }
     }
 }

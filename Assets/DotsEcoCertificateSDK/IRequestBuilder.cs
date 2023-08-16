@@ -1,6 +1,9 @@
 using UnityEngine.Networking;
 
-public interface IRequestBuilder
+namespace DotsEcoCertificateSDK
 {
-    UnityWebRequest BuildRequest();
+    public interface IRequestBuilder
+    {
+        UnityWebRequest BuildRequest();
+    }
 }
