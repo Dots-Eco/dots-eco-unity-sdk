@@ -44,5 +44,10 @@ namespace DotsEcoCertificateSDK
             request.SetRequestHeader("auth-token", authToken);
             return request;
         }
+
+        public object GetCertificateRequest(object testAppToken, string testCertificateId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,6 +8,8 @@ namespace DotsEcoCertificateSDK
     public class CertificateServiceIntegrationTests
     {
         private CertificateService certificateService;
+        private static string TestCertificateId = "514588-6-5";
+        private static string TestAppToken = "6-c2b4554f";
 
         [SetUp]
         public void SetUp()
@@ -19,15 +21,15 @@ namespace DotsEcoCertificateSDK
         [UnityTest]
         public IEnumerator GetCertificate_ValidData_SuccessCallbackIsInvoked()
         {
-            var request = certificateService.GetCertificateRequest("6-c2b4554f", "514588-6-5");
+            var request = certificateService.GetCertificateRequest(TestAppToken, TestCertificateId);
 
             yield return request.SendWebRequest();
 
             CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
-
+            Assert.IsNotNull(response);
             Assert.IsEmpty(request.downloadHandler.error);
             Assert.IsNotNull(request.downloadHandler.text);
-            Assert.AreEqual("514588-6-5", response.certificate_id);
+            Assert.AreEqual(TestCertificateId, response.certificate_id);
             Assert.AreEqual("https://impact.dots.eco/certificate/7ed883f8-84e5-4c70-a343-8382b92b47e5", response.certificate_url);
             Assert.AreEqual("https://impact.dots.eco/certificate/img/7ed883f8-84e5-4c70-a343-8382b92b47e5.jpg", response.certificate_image_url);
             Assert.AreEqual(6, response.app_id);
