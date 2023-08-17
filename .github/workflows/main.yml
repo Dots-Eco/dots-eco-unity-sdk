@@ -1,4 +1,4 @@
-name: Test project
+name: Dots.eco Unity SDK Build Action
 
 on: [pull_request]
 
