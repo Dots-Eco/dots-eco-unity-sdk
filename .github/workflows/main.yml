@@ -1,6 +1,7 @@
 name: Dots.eco Unity SDK Build Action
 
-on: [pull_request]
+on: 
+  workflow_dispatch: {} # [pull_request]
 
 jobs:
   testAllModes:
