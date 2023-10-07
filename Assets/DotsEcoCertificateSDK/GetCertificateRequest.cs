@@ -25,7 +25,7 @@ namespace DotsEcoCertificateSDK
 
         public UnityWebRequest BuildRequest()
         {
-            string fullUrl = string.Format(Constants.GetUrlPath, certificateId);
+            string fullUrl = Constants.GetUrlPath + certificateId;
 
             UnityWebRequest request = UnityWebRequest.Get(fullUrl);
 

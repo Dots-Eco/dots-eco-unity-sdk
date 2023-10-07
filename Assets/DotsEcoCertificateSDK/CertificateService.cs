@@ -38,6 +38,17 @@ namespace DotsEcoCertificateSDK
             return PrepareRequest(builder);
         }
 
+        public UnityWebRequest ImpactSummaryByUserId(string companyId, string appToken, string remoteUserId)
+        {
+            ImpactSummaryRequestBuilder builder = new ImpactSummaryRequestBuilder(authToken, companyId, appToken, remoteUserId);
+            return PrepareRequest(builder);
+        }
+
+        public UnityWebRequest ImpactSummaryByUserId(ImpactSummaryRequestBuilder builder)
+        {
+            return PrepareRequest(builder);
+        }
+
         private UnityWebRequest PrepareRequest(IRequestBuilder builder)
         {
             UnityWebRequest request = builder.BuildRequest();
