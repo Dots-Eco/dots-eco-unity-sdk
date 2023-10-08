@@ -2,6 +2,7 @@ using UnityEngine.TestTools;
 using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
+using System;
 
 namespace DotsEcoCertificateSDK
 {
@@ -14,7 +15,7 @@ namespace DotsEcoCertificateSDK
         [SetUp]
         public void SetUp()
         {
-            certificateService = new CertificateService("TestObject");
+            certificateService = new CertificateService(Environment.GetEnvironmentVariable("DOTS_AUTH_TOKEN"));
 
         }
 
