@@ -44,8 +44,8 @@ namespace DotsEcoCertificateSDK
             }
 
             requestData.app_token = appToken;
-            requestData.impact_qty = impactQty;
             requestData.allocation_id = allocationId;
+            requestData.impact_qty = impactQty;
             requestData.remote_user_id = remoteUserId;
         }
 

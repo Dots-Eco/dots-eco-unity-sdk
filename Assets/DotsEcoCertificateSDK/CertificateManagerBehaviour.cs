@@ -31,9 +31,9 @@ namespace DotsEcoCertificateSDK
             StartCoroutine(Send(request, onSuccess, onError));
         }
 
-        public void CreateCertificate(string appToken, int impactQty, int allocationId, string remoteUserId, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
+        public void CreateCertificate(string appToken, int allocationId, int impactQty, string remoteUserId, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
         {
-            var request = certificateService.CreateCertificateRequest(appToken, impactQty, allocationId, remoteUserId);
+            var request = certificateService.CreateCertificateRequest(appToken, allocationId, impactQty, remoteUserId);
             StartCoroutine(Send(request, onSuccess, onError));
         }
 

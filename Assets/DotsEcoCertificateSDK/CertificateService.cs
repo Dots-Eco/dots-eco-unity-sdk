@@ -27,9 +27,9 @@ namespace DotsEcoCertificateSDK
             return PrepareRequest(builder);
         }
 
-        public UnityWebRequest CreateCertificateRequest(string appToken, int impactQty, int allocationId, string remoteUserId)
+        public UnityWebRequest CreateCertificateRequest(string appToken, int allocationId, int impactQty, string remoteUserId)
         {
-            CreateCertificateRequestBuilder builder = new CreateCertificateRequestBuilder(appToken, impactQty, allocationId, remoteUserId);
+            CreateCertificateRequestBuilder builder = new CreateCertificateRequestBuilder(appToken, allocationId, impactQty, remoteUserId);
             return PrepareRequest(builder);
         }
 

@@ -25,7 +25,7 @@ namespace DotsEcoCertificateSDK
         [Test]
         public void CreateCertificateRequest_ValidInputs_CorrectlySetsAuthToken()
         {
-            var request = certificateService.CreateCertificateRequest("test-app-token", 10, 5, "ezbz");
+            var request = certificateService.CreateCertificateRequest("test-app-token", 5, 10, "ezbz");
 
             Assert.IsNotNull(request);
             Assert.AreEqual(testAuthToken, request.GetRequestHeader("auth-token"));
