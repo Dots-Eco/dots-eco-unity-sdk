@@ -7,11 +7,12 @@ namespace DotsEcoCertificateSDK
 {
     public class CertificateManagerBehaviour : MonoBehaviour
     {
+        [SerializeField] private string authToken = "";
+        
         private CertificateService certificateService;
 
         private void Awake()
         {
-            string authToken = Environment.GetEnvironmentVariable("DOTS_AUTH_TOKEN");
             if (string.IsNullOrEmpty(authToken))
             {
                 throw new ArgumentException("authToken is required!", nameof(authToken));
@@ -54,7 +55,8 @@ namespace DotsEcoCertificateSDK
             }
             else
             {
-                CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
+                //CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
+                CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(Constants.FakeJSONResponse);
                 onSuccess?.Invoke(response);
             }
         }

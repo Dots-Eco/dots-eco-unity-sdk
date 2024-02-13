@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -13,8 +15,8 @@ namespace DotsEcoCertificateSDK
         private string certificateUrl = "";
         private string logText = "";
 
-
         private string appToken = "";
+        
         private string impactQty = "1";
         private string allocationId = "5";
         private string remoteUserId = "ecohero";
@@ -26,6 +28,17 @@ namespace DotsEcoCertificateSDK
         private string langCode = "EN";
         private string currency = "USD";
 
+        private Rendering rendering;
+
+        private ImpactTypeCategory impactTypeCategory = new ImpactTypeCategory(
+            "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/2024-01/tree_icon.png");
+        
+        private CategoryTheme categoryTheme = new CategoryTheme("land", "rgba(231,133,42,0.83)",
+            "rgba(217,82,7,0.81)", "rgba(162,45,9,0.6)", "rgba(187,66,20,0.92)",
+            "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/2024-01/scratch.svg");
+
+        private Geolocation geolocation;
+        
         public static void ShowWindow()
         {
             GetWindow<CreateSanboxCertificateWindow>("Create Certificate in Sandbox");
@@ -34,8 +47,9 @@ namespace DotsEcoCertificateSDK
         private void Awake()
         {
             string authToken = EditorPrefs.GetString("DotsEco_AuthToken");
-            appToken = EditorPrefs.GetString("DotsEco_SandboxAppToken");
             certificateService = new CertificateService(authToken);
+            
+            appToken = EditorPrefs.GetString("DotsEco_SandboxAppToken");
         }
 
         private void OnGUI()
@@ -47,10 +61,13 @@ namespace DotsEcoCertificateSDK
             EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.TextField("App Token:", appToken);
             EditorGUI.EndDisabledGroup();
+            
             impactQty = EditorGUILayout.TextField("Impact Quantity (required):", impactQty);
             allocationId = EditorGUILayout.TextField("Allocation ID (required):", allocationId);
             remoteUserId = EditorGUILayout.TextField("Remote User ID (required):", remoteUserId);
+            
             EditorGUILayout.Space();
+            
             nameOnCertificate = EditorGUILayout.TextField("Name on Certificate:", nameOnCertificate);
             remoteUserEmail = EditorGUILayout.TextField("Remote User Email:", remoteUserEmail);
             certificateDesign = EditorGUILayout.TextField("Certificate Design:", certificateDesign);
@@ -58,6 +75,17 @@ namespace DotsEcoCertificateSDK
             certificateInfo = EditorGUILayout.TextField("Certificate Info:", certificateInfo);
             langCode = EditorGUILayout.TextField("Language Code:", langCode);
             currency = EditorGUILayout.TextField("Currency:", currency);
+
+            EditorGUILayout.Space();
+            
+            // Theme
+            EditorGUILayout.LabelField("Theme");
+            categoryTheme.name = EditorGUILayout.TextField("Category theme name:", categoryTheme.name);
+            categoryTheme.primary = EditorGUILayout.TextField("Primary color:", categoryTheme.primary);
+            categoryTheme.secondary = EditorGUILayout.TextField("Secondary color:", categoryTheme.secondary);
+            categoryTheme.tertiary = EditorGUILayout.TextField("Tertiary color:", categoryTheme.tertiary);
+            categoryTheme.background = EditorGUILayout.TextField("Background color:", categoryTheme.background);
+            categoryTheme.scratch_image_url = EditorGUILayout.TextField("Scratch image URL:", categoryTheme.scratch_image_url);
 
             bool canSend = !string.IsNullOrEmpty(appToken) && !string.IsNullOrEmpty(impactQty) &&
                            !string.IsNullOrEmpty(allocationId) && !string.IsNullOrEmpty(remoteUserId);
@@ -98,14 +126,18 @@ namespace DotsEcoCertificateSDK
                 return;
             }
 
-            CreateCertificateRequestBuilder builder = new CreateCertificateRequestBuilder(appToken, int.Parse(impactQty), int.Parse(allocationId), remoteUserId)
-                .WithNameOnCertificate(nameOnCertificate)
-                .WithRemoteUserEmail(remoteUserEmail)
-                .WithCertificateDesign(certificateDesign)
-                .WithSendCertificateByEmail(sendCertificateByEmail)
-                .WithCertificateInfo(certificateInfo)
-                .WithLangCode(langCode)
-                .WithCurrency(currency);
+            CreateCertificateRequestBuilder builder =
+                new CreateCertificateRequestBuilder(appToken, int.Parse(allocationId), int.Parse(impactQty),
+                        remoteUserId)
+                    .WithNameOnCertificate(nameOnCertificate)
+                    .WithRemoteUserEmail(remoteUserEmail)
+                    .WithCertificateDesign(certificateDesign)
+                    .WithSendCertificateByEmail(sendCertificateByEmail)
+                    .WithCertificateInfo(certificateInfo)
+                    .WithLangCode(langCode)
+                    .WithCurrency(currency)
+                    .WithGeolocation(geolocation);
+                    //.WithRendering(new Rendering(new Theme(categoryTheme)));
 
             UnityWebRequest request = certificateService.CreateCertificateRequest(builder);
             var operation = request.SendWebRequest();

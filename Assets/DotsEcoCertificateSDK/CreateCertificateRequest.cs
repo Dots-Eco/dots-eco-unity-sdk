@@ -18,6 +18,11 @@ namespace DotsEcoCertificateSDK
         public string certificate_info;
         public string lang_code;
         public string currency;
+
+        public Geolocation geolocation;
+        public Rendering rendering;
+        public ImpactTypeCategory impactTypeCategory;
+        public CategoryTheme categoryTheme;
     }
 
     public class CreateCertificateRequestBuilder : IRequestBuilder
@@ -88,6 +93,18 @@ namespace DotsEcoCertificateSDK
         public CreateCertificateRequestBuilder WithCurrency(string currency)
         {
             requestData.currency = currency;
+            return this;
+        }
+
+        public CreateCertificateRequestBuilder WithGeolocation(Geolocation geolocation)
+        {
+            requestData.geolocation = geolocation;
+            return this;
+        }
+
+        public CreateCertificateRequestBuilder WithRendering(Rendering rendering)
+        {
+            requestData.rendering = rendering;
             return this;
         }
 

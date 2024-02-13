@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 using UnityEngine.Networking;
 
 namespace DotsEcoCertificateSDK
@@ -25,7 +26,7 @@ namespace DotsEcoCertificateSDK
 
         public UnityWebRequest BuildRequest()
         {
-            string fullUrl = Constants.GetUrlPath + certificateId;
+            string fullUrl = Constants.GetUrlPath + certificateId + "?format=sdk";
 
             UnityWebRequest request = UnityWebRequest.Get(fullUrl);
 
