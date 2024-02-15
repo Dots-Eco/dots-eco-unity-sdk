@@ -79,10 +79,10 @@ namespace DotsEcoCertificateSDK
             shareButton.Link = certificateResponse.certificate_url;
 
             ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color mainContentColor);
-            mainContentBackgroundImage.color = mainContentColor;
+            //mainContentBackgroundImage.color = mainContentColor;
             
             ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color middleBackgroundColor);
-            middleBackgroundImage.color = middleBackgroundColor;
+            //middleBackgroundImage.color = middleBackgroundColor;
         }
 
         private void OnCertificateTextureLoaded(Texture2D texture)
