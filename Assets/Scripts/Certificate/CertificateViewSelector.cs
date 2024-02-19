@@ -26,17 +26,17 @@ namespace DotsEcoCertificateSDK
 
         private void OnEnable()
         {
-            canvasHelper.OnOrientationChanged += SelectView;
+            canvasHelper.OnScreenOrientationChanged += SelectView;
         }
         
         private void OnDisable()
         {
-            canvasHelper.OnOrientationChanged -= SelectView;
+            canvasHelper.OnScreenOrientationChanged -= SelectView;
         }
 
-        private void SelectView(DeviceScreenOrientation newOrientation)
+        private void SelectView(ScreenOrientation screenOrientation)
         {
-            if (newOrientation == DeviceScreenOrientation.Vertical)
+            if (screenOrientation is ScreenOrientation.Portrait or ScreenOrientation.PortraitUpsideDown)
             {
                 verticalView.SetActive(true);
                 horizontalView.SetActive(false);

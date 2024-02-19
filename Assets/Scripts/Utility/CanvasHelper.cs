@@ -7,24 +7,19 @@ namespace Utility
     [RequireComponent(typeof(Canvas))]
     public class CanvasHelper : MonoBehaviour
     {
-        public event Action<DeviceScreenOrientation> OnOrientationChanged;
+        public event Action<ScreenOrientation> OnScreenOrientationChanged;
         public event Action OnResolutionChanged;
  
         [SerializeField] private RectTransform safeAreaTransform;
         [SerializeField] private bool showLogs = false;
 
-        private DeviceScreenOrientation _lastOrientation = DeviceScreenOrientation.Horizontal;
         private Vector2 _lastResolution = Vector2.zero;
         private Rect _lastSafeArea = Rect.zero;
         
         private Canvas _canvas;
         
-        public DeviceScreenOrientation LastOrientation
-        {
-            get => _lastOrientation;
-            private set => _lastOrientation = value;
-        }
- 
+        public ScreenOrientation LastOrientation { get; private set; } = ScreenOrientation.Portrait;
+
         private void Awake()
         {
             _canvas = GetComponent<Canvas>();
@@ -32,8 +27,8 @@ namespace Utility
             _lastResolution.x = Screen.width;
             _lastResolution.y = Screen.height;
             _lastSafeArea = Screen.safeArea;
- 
-            _lastOrientation = (Screen.width / Screen.height > 1) ? DeviceScreenOrientation.Horizontal : DeviceScreenOrientation.Vertical;
+            
+            LastOrientation = Screen.orientation;
             
             ApplySafeArea();
         }
@@ -42,6 +37,7 @@ namespace Utility
         {
             if (Screen.width != (int)_lastResolution.x || Screen.height != (int)_lastResolution.y) ResolutionChanged();
             if (Screen.safeArea != _lastSafeArea) SafeAreaChanged();
+            if (Screen.orientation != LastOrientation) OrientationChanged();
             
 #if UNITY_EDITOR
             ApplySafeArea();
@@ -65,6 +61,15 @@ namespace Utility
             safeAreaTransform.anchorMin = anchorMin;
             safeAreaTransform.anchorMax = anchorMax;
         }
+
+        private void OrientationChanged()
+        {
+            if (showLogs) Debug.Log("Orientation changed from: " + LastOrientation + "to: " + Screen.orientation);
+            
+            LastOrientation = Screen.orientation;
+            
+            OnScreenOrientationChanged?.Invoke(Screen.orientation);
+        }
  
         private void ResolutionChanged()
         {
@@ -72,16 +77,6 @@ namespace Utility
 
             _lastResolution.x = Screen.width;
             _lastResolution.y = Screen.height;
-            
-            DeviceScreenOrientation newOrientation = (Screen.width / Screen.height > 1) ? DeviceScreenOrientation.Horizontal : DeviceScreenOrientation.Vertical;
- 
-            if (newOrientation != _lastOrientation)
-            {
-                _lastOrientation = newOrientation;
-                OnOrientationChanged?.Invoke(newOrientation);
-                
-                Debug.Log("Orientation changed to " + newOrientation);
-            }
             
             OnResolutionChanged?.Invoke();
         }
