@@ -45,7 +45,7 @@ namespace DotsEcoCertificateSDK
 
         private void OnGetCertificateSuccess(CertificateResponse certificateResponse)
         {
-            Debug.Log($"Certificate {certificateId} has been loaded successfully.");
+            if (showLogs) Debug.Log($"Certificate {certificateId} has been loaded successfully.");
 
             CertificateResponse = certificateResponse;
             

@@ -382,45 +382,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
---- !u!1 &1612551090
+--- !u!1 &1600247181 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8735455884525264593, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+  m_PrefabInstance: {fileID: 1896588054}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1612551091}
-  - component: {fileID: 1612551092}
-  m_Layer: 0
-  m_Name: CertificateManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1612551091
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612551090}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1612551092
+--- !u!114 &1600247189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612551090}
+  m_GameObject: {fileID: 1600247181}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 965073754ca7c42f0966aa188d705af9, type: 3}
@@ -543,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 605130552829193159, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: certificateManagerBehaviour
       value: 
-      objectReference: {fileID: 1612551092}
+      objectReference: {fileID: 1600247189}
     - target: {fileID: 1433603250193673966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -642,11 +615,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.89166665
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.8908784
+      value: 0.9492441
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMin.x
@@ -654,11 +627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.03445946
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996743065244421829, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: showLogs
-      value: 1
+      value: 0.03671706
       objectReference: {fileID: 0}
     - target: {fileID: 5116223272241792374, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x
@@ -680,10 +649,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8235972408554815694, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2138517635}
     - target: {fileID: 8735455884525264593, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_Name
       value: CertificateCanvas
@@ -691,7 +656,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8735455884525264593, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1600247189}
   m_SourcePrefab: {fileID: 100100000, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
 --- !u!21 &2138517635
 Material:
@@ -736,6 +704,5 @@ SceneRoots:
   - {fileID: 1119243536}
   - {fileID: 1640272517}
   - {fileID: 868633559}
-  - {fileID: 1612551091}
   - {fileID: 1418824630}
   - {fileID: 1896588054}

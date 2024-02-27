@@ -55,8 +55,8 @@ namespace DotsEcoCertificateSDK
             }
             else
             {
-                //CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
-                CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(Constants.FakeJSONResponse);
+                CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
+                //CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(Constants.FakeJSONResponse);
                 onSuccess?.Invoke(response);
             }
         }

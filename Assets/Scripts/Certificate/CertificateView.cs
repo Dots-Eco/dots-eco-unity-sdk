@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,8 @@ namespace DotsEcoCertificateSDK
 
         [SerializeField] private CertificateHandler certificateHandler;
 
+        [SerializeField] private Image mainContentBackgroundImage;
+        
         [Header("Top")] 
         [SerializeField] private TextMeshProUGUI certificateIDText;
         [SerializeField] private Button certificateIDLinkButton;
@@ -19,14 +22,12 @@ namespace DotsEcoCertificateSDK
         [SerializeField] private TextMeshProUGUI certificateTitleText;
         [SerializeField] private Button closeButton;
 
-        [SerializeField] private Image mainContentBackgroundImage;
 
         [Header("Middle")] 
+        [SerializeField] private Image middleBackgroundImage;
         [SerializeField] private Image impactIconBackgroundImage;
         [SerializeField] private Image impactIconImage;
         [SerializeField] private TextMeshProUGUI thankYouText;
-
-        [SerializeField] private Image middleBackgroundImage;
 
         [Header("ScratchArea")] 
         [SerializeField] private Image scratchMeImage;
@@ -43,6 +44,8 @@ namespace DotsEcoCertificateSDK
         [SerializeField] private Button termsOfUseLinkButton;
         [SerializeField] private Button privacyPolicyLinkButton;
 
+        private Image shareButtonImage;
+
         private void Awake()
         {
             certificateHandler.OnCertificateLoaded += OnCertificateLoaded;
@@ -55,6 +58,8 @@ namespace DotsEcoCertificateSDK
         private void Start()
         {
             SetupButtons();
+            
+            shareButtonImage = shareButton.GetComponent<Image>();
         }
 
         private void SetupButtons()
@@ -66,23 +71,30 @@ namespace DotsEcoCertificateSDK
 
         private void OnCertificateLoaded(CertificateResponse certificateResponse)
         {
+            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color primaryColor);
+            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.secondary, out Color secondaryColor);
+            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.background, out Color backgroundColor);
+
+            mainContentBackgroundImage.color = backgroundColor;
+            middleBackgroundImage.color = secondaryColor;
+            
             certificateIDText.text = $"{DOTS_ECO_CERTIFICATE_ID_TEXT}<u>{certificateResponse.certificate_id}</u>";
             thankYouText.text = THANK_YOU_TEXT + certificateResponse.name_on_certificate;
+            thankYouText.color = primaryColor;
             
             string titleText = certificateResponse.rendering.impact_title;
-            string replacedString = titleText.Replace("with", "\nwith");
-            certificateTitleText.text = replacedString;
+            string boldPart = "<b>" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[0].Trim() 
+                + "</b>\nwith" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[1];
+            
+            certificateTitleText.text = boldPart;
             
             impactLocationText.text = certificateResponse.country;
 
             certificateIDLinkButton.onClick.AddListener(() => Application.OpenURL(certificateResponse.certificate_url));
             shareButton.Link = certificateResponse.certificate_url;
+            shareButtonImage.color = primaryColor;
 
-            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color mainContentColor);
-            //mainContentBackgroundImage.color = mainContentColor;
-            
-            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color middleBackgroundColor);
-            //middleBackgroundImage.color = middleBackgroundColor;
+            certificateTitleText.color = primaryColor;
         }
 
         private void OnCertificateTextureLoaded(Texture2D texture)
