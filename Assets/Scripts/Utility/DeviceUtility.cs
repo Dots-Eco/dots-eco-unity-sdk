@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using UnityEngine;
+using UnityEngine.Android;
 
 namespace Utility
 {
@@ -8,6 +9,11 @@ namespace Utility
         
         public static void SaveCertificateImageToDevice(Texture2D texture, string imageName)
         {
+            if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
+            {
+                Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+            }
+            
             string fileName = imageName + ".png";
             byte[] bytes = texture.EncodeToPNG();
             

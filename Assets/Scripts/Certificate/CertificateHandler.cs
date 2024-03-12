@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.Networking;
 
 namespace DotsEcoCertificateSDK
@@ -19,10 +18,11 @@ namespace DotsEcoCertificateSDK
 
         [Header("Config")]
         [SerializeField] private string appToken = "";
-        [SerializeField] private string certificateId = "";
         [SerializeField] private HyperlinksConfig hyperlinksConfig;
         
         [SerializeField] private bool showLogs = false;
+        
+        private string certificateId = "";
 
         public CertificateResponse CertificateResponse { get; private set; }
         
@@ -35,17 +35,25 @@ namespace DotsEcoCertificateSDK
 
         private void Start()
         {
-            if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
-            {
-                Permission.RequestUserPermission(Permission.ExternalStorageWrite);
-            }
+            certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
+            
+            // TODO: Remove when we can receive the certificate ID from the server
+            // if (certificateId == "")
+            // {
+            //     Debug.LogError("Certificate ID is required!");
+            //     //return;
+            // }
             
             certificateManagerBehaviour.GetCertificate(appToken, certificateId, OnGetCertificateSuccess, OnGetCertificateError);
         }
 
         private void OnGetCertificateSuccess(CertificateResponse certificateResponse)
         {
-            if (showLogs) Debug.Log($"Certificate {certificateId} has been loaded successfully.");
+            if (showLogs)
+            {
+                Debug.Log($"Certificate {certificateId} has been loaded successfully.");
+                DebugCertificate(certificateResponse);
+            }
 
             CertificateResponse = certificateResponse;
             
@@ -53,13 +61,17 @@ namespace DotsEcoCertificateSDK
             
             StartCoroutine(LoadWebTexture(certificateResponse.certificate_image_url, CertificateTextureLoaded));
             //StartCoroutine(LoadWebTexture(certificateResponse.rendering.theme.category_theme.scratch_image_url, ScratchMeTextureLoaded)); // TODO: This is loading SVG, we can't use it right now
-            StartCoroutine(LoadWebTexture(certificateResponse.certificate_image_url, ScratchMeTextureLoaded));
-            StartCoroutine(LoadWebTexture(certificateResponse.rendering.app.logo_url, AppLogoTextureLoaded));
-            StartCoroutine(LoadWebTexture(certificateResponse.rendering.theme.impact_type_category.icon_url, ImpactLogoTextureLoaded));
-
-            if (showLogs)
+            
+            string appLogoUrl = certificateResponse.rendering.theme.impact_type_category.icon_url;
+            if (appLogoUrl != "")
             {
-                DebugCertificate(certificateResponse);
+                StartCoroutine(LoadWebTexture(appLogoUrl, AppLogoTextureLoaded));
+            }
+
+            string impactIconUrl = CertificateResponse.rendering.theme.impact_type_category.icon_url;
+            if (impactIconUrl != "")
+            {
+                StartCoroutine(LoadWebTexture(impactIconUrl, ImpactLogoTextureLoaded));
             }
         }
 
@@ -140,7 +152,8 @@ namespace DotsEcoCertificateSDK
             
             Debug.Log("App logo url: " + certificateResponse.rendering.app.logo_url);
             
-            Debug.Log("impact title: " + certificateResponse.rendering.impact_title);
+            Debug.Log("Certificate header: " + certificateResponse.rendering.certificate_header);
+            Debug.Log("Greeting: " + certificateResponse.rendering.greeting);
             
             Debug.Log("impact type category: " + certificateResponse.rendering.theme.impact_type_category.icon_url);
             

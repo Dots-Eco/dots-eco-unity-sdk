@@ -10,7 +10,7 @@ namespace DotsEcoCertificateSDK
         public string certificate_image_url;
         public int app_id;
         public string app_name;
-        public string remote_user_id;
+        public string remote_user_id; // Developers need to provide their own remote user id (For example unique user account id)
         public string name_on_certificate;
         public string certificate_design;
         public string certificate_info;
@@ -30,13 +30,23 @@ namespace DotsEcoCertificateSDK
     public class Rendering
     {
         public App app;
-        public string impact_title;
+        public string certificate_header;
+        public string greeting;
         public Theme theme;
 
-        public Rendering(App App, string ImpactTitle, Theme Theme)
+        public Rendering()
+        {
+            app = new App();
+            certificate_header = "";
+            greeting = "";
+            theme = new Theme();
+        }
+
+        public Rendering(App App, string CertificateHeader, string Greeting, Theme Theme)
         {
             app = App;
-            impact_title = ImpactTitle;
+            certificate_header = CertificateHeader;
+            greeting = Greeting;
             theme = Theme;
         }
 
@@ -51,6 +61,12 @@ namespace DotsEcoCertificateSDK
     {
         public double lat;
         public double lng;
+        
+        public Geolocation()
+        {
+            lat = 0;
+            lng = 0;
+        }
 
         public Geolocation(double Lat, double Lng)
         {
@@ -64,6 +80,11 @@ namespace DotsEcoCertificateSDK
     {
         public string logo_url;
 
+        public App()
+        {
+            logo_url = "";
+        }
+
         public App(string LogoURL)
         {
             logo_url = LogoURL;
@@ -75,6 +96,12 @@ namespace DotsEcoCertificateSDK
     {
         public ImpactTypeCategory impact_type_category;
         public CategoryTheme category_theme;
+        
+        public Theme()
+        {
+            impact_type_category = new ImpactTypeCategory();
+            category_theme = new CategoryTheme();
+        }
 
         public Theme(ImpactTypeCategory ImpactTypeCategory, CategoryTheme CategoryTheme)
         {
@@ -92,6 +119,11 @@ namespace DotsEcoCertificateSDK
     public class ImpactTypeCategory
     {
         public string icon_url;
+        
+        public ImpactTypeCategory()
+        {
+            icon_url = "";
+        }
 
         public ImpactTypeCategory(string IconURL)
         {
@@ -108,6 +140,16 @@ namespace DotsEcoCertificateSDK
         public string tertiary;
         public string background;
         public string scratch_image_url;
+        
+        public CategoryTheme()
+        {
+            name = "";
+            primary = "";
+            secondary = "";
+            tertiary = "";
+            background = "";
+            scratch_image_url = "";
+        }
         
         public CategoryTheme(string Name, string Primary, string Secondary, string Tertiary, string Background, string ScratchImageURL)
         {

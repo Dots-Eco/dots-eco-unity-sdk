@@ -283,123 +283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1418824630
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 113706, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137284, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_Name
-      value: ScratchCardManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 437468, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2357512, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2138517635}
-    - target: {fileID: 11474202, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: SurfaceMaterial
-      value: 
-      objectReference: {fileID: 2138517635}
-    - target: {fileID: 11474202, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: SurfaceTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: brushSize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: RenderType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 1119243535}
-    - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: meshRendererCard
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: canvasRendererCard
-      value: 
-      objectReference: {fileID: 1754102149}
-    - target: {fileID: 11486244, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-      propertyPath: spriteRendererCard
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 178426, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-    - {fileID: 113706, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bfd21db4576fb4dac871b93fdc37924b, type: 3}
---- !u!1 &1600247181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8735455884525264593, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-  m_PrefabInstance: {fileID: 1896588054}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1600247189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600247181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965073754ca7c42f0966aa188d705af9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  authToken: a6d1b70911e0ca0b9c2d13a0d189b0d6
 --- !u!1 &1640272515
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,17 +377,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &1754102149 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8235972408554815694, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-  m_PrefabInstance: {fileID: 1896588054}
+--- !u!21 &1654613951
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name: ScratchCard/Mask
+  m_Shader: {fileID: 4800000, guid: 091cc9a445340c04bbcfbc65c0bef43f, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 571dbb2cbefac464195f151b4deca922, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats: []
+    m_Colors:
+    - _Offset: {r: 0, g: 0, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &1896588054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -513,10 +421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 605130552829193159, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: certificateManagerBehaviour
+    - target: {fileID: 1060949099028463918, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: SurfaceMaterial
       value: 
-      objectReference: {fileID: 1600247189}
+      objectReference: {fileID: 1654613951}
     - target: {fileID: 1433603250193673966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -605,14 +513,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2366211430582882315, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3227467202822572964, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 2767163482108290148, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1119243535}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -637,18 +541,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6693429046043977399, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7934207610026583043, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: scratchImage
+    - target: {fileID: 8235972408554815694, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1754102149}
-    - target: {fileID: 8120201262902069165, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1654613951}
     - target: {fileID: 8735455884525264593, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_Name
       value: CertificateCanvas
@@ -656,47 +552,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8735455884525264593, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1600247189}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
---- !u!21 &2138517635
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ScratchCard/Mask
-  m_Shader: {fileID: 4800000, guid: 091cc9a445340c04bbcfbc65c0bef43f, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 571dbb2cbefac464195f151b4deca922, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats: []
-    m_Colors:
-    - _Offset: {r: 0, g: 0, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -704,5 +561,4 @@ SceneRoots:
   - {fileID: 1119243536}
   - {fileID: 1640272517}
   - {fileID: 868633559}
-  - {fileID: 1418824630}
   - {fileID: 1896588054}

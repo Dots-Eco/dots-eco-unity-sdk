@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Text.RegularExpressions;
@@ -17,13 +18,19 @@ namespace DotsEcoCertificateSDK
 
         public static void ShowWindow()
         {
-            GetWindow<GetCertificateWindow>("Test Get Certificate");
+            GetCertificateWindow window = GetWindow<GetCertificateWindow>("Test Get Certificate");
+            window.GetCertificateID();
         }
 
         private void Awake()
         {
             string authToken = EditorPrefs.GetString("DotsEco_AuthToken");
             certificateService = new CertificateService(authToken);
+        }
+
+        private void GetCertificateID()
+        {
+            certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "");
         }
 
         private void OnGUI()
@@ -43,7 +50,7 @@ namespace DotsEcoCertificateSDK
 
             EditorGUILayout.LabelField("Log:", EditorStyles.boldLabel);
             EditorStyles.textField.wordWrap = true;
-            EditorGUILayout.TextArea(logText, GUILayout.Height(120));
+            EditorGUILayout.TextArea(logText, GUILayout.Height(200));
 
             if (!string.IsNullOrEmpty(certificateUrl))
             {

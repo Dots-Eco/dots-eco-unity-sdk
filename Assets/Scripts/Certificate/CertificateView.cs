@@ -35,8 +35,9 @@ namespace DotsEcoCertificateSDK
         [SerializeField] private Image locationImage;
         [SerializeField] private TextMeshProUGUI impactLocationText;
 
-        [Header("Bottom")] [SerializeField] 
-        private ShareButton shareButton;
+        [Header("Bottom")] 
+        [SerializeField] private ShareButton shareButton;
+        [SerializeField] private Image shareButtonImage;
         [SerializeField] private Image companyLogoImage;
 
         [Header("Footer/Links")] 
@@ -44,7 +45,6 @@ namespace DotsEcoCertificateSDK
         [SerializeField] private Button termsOfUseLinkButton;
         [SerializeField] private Button privacyPolicyLinkButton;
 
-        private Image shareButtonImage;
 
         private void Awake()
         {
@@ -57,9 +57,7 @@ namespace DotsEcoCertificateSDK
         
         private void Start()
         {
-            SetupButtons();
-            
-            shareButtonImage = shareButton.GetComponent<Image>();
+            SetupButtons();            
         }
 
         private void SetupButtons()
@@ -71,41 +69,60 @@ namespace DotsEcoCertificateSDK
 
         private void OnCertificateLoaded(CertificateResponse certificateResponse)
         {
-            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color primaryColor);
-            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.secondary, out Color secondaryColor);
-            ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.background, out Color backgroundColor);
+            if (certificateResponse.rendering.theme != null)
+            {
+                ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.primary, out Color primaryColor);
+                ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.secondary, out Color secondaryColor);
+                ColorUtility.TryParseHtmlString(certificateResponse.rendering.theme.category_theme.background, out Color backgroundColor);   
+                
+                mainContentBackgroundImage.color = backgroundColor;
+                middleBackgroundImage.color = secondaryColor;
+                
+                thankYouText.color = primaryColor;
+                
+                shareButtonImage.color = primaryColor;
 
-            mainContentBackgroundImage.color = backgroundColor;
-            middleBackgroundImage.color = secondaryColor;
-            
+                certificateTitleText.color = primaryColor;
+            }
+            else
+            {
+                Debug.LogWarning("Warning: Certificate has no rendering theme");
+            }
+
             certificateIDText.text = $"{DOTS_ECO_CERTIFICATE_ID_TEXT}<u>{certificateResponse.certificate_id}</u>";
             thankYouText.text = THANK_YOU_TEXT + certificateResponse.name_on_certificate;
-            thankYouText.color = primaryColor;
-            
-            string titleText = certificateResponse.rendering.impact_title;
-            string boldPart = "<b>" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[0].Trim() 
-                + "</b>\nwith" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[1];
-            
-            certificateTitleText.text = boldPart;
+
+            // TODO: Impact title
+            // if (certificateResponse.rendering.impact_title != null)
+            // {
+            //     string titleText = certificateResponse.rendering.impact_title;
+            //     string boldPart = "<b>" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[0].Trim() 
+            //         + "</b>\nwith" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[1];
+            //     certificateTitleText.text = boldPart;
+            // }
+            // else
+            // {
+            //     Debug.LogWarning("Warning: Certificate has no rendering impact title");
+            // }
             
             impactLocationText.text = certificateResponse.country;
 
             certificateIDLinkButton.onClick.AddListener(() => Application.OpenURL(certificateResponse.certificate_url));
             shareButton.Link = certificateResponse.certificate_url;
-            shareButtonImage.color = primaryColor;
-
-            certificateTitleText.color = primaryColor;
         }
 
         private void OnCertificateTextureLoaded(Texture2D texture)
         {
-            downloadCertificateButton.onClick.AddListener(() => DeviceUtility.SaveCertificateImageToDevice(texture,
-                    certificateHandler.CertificateResponse.certificate_id));
+            downloadCertificateButton.onClick.AddListener(() =>
+            {
+                DeviceUtility.SaveCertificateImageToDevice(texture,
+                    certificateHandler.CertificateResponse.certificate_id);
+            });
         }
 
         private void OnScratchMeTextureLoaded(Texture2D texture)
         {
-            // TODO: Implement when ready
+            // TODO: Implement when ready (we need scratchme image from certificate response)
             //scratchMeImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         }
 

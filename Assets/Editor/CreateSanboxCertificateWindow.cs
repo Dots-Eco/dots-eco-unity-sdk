@@ -30,14 +30,21 @@ namespace DotsEcoCertificateSDK
 
         private Rendering rendering;
 
-        private ImpactTypeCategory impactTypeCategory = new ImpactTypeCategory(
-            "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/2024-01/tree_icon.png");
-        
-        private CategoryTheme categoryTheme = new CategoryTheme("land", "rgba(231,133,42,0.83)",
-            "rgba(217,82,7,0.81)", "rgba(162,45,9,0.6)", "rgba(187,66,20,0.92)",
-            "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/2024-01/scratch.svg");
-
         private Geolocation geolocation;
+
+        private string logoUrl = "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/logo/Group%203308_3.png";
+        
+        private string certificateHeader = "&lt;p&gt;For planting, 10, tree&lt;/p&gt;";
+        private string greeting = "&lt;p&gt;For greeting Dots.eco, 10, Dots.eco&lt;/p&gt;";
+
+        private string iconUrl = "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/2024-02/tree%201.png";
+
+        public string categoryThemeName = "Climate";
+        public string categoryThemePrimary = "006B54ff";
+        public string categoryThemeSecondary = "#38C961ff";
+        public string categoryThemeTertiary = "#B3F281ff";
+        public string categoryThemeBackground = "#F4FDEDff";
+        public string categoryThemeScratchImageUrl = "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/2024-01/scratch.svg";
         
         public static void ShowWindow()
         {
@@ -64,7 +71,7 @@ namespace DotsEcoCertificateSDK
             
             impactQty = EditorGUILayout.TextField("Impact Quantity (required):", impactQty);
             allocationId = EditorGUILayout.TextField("Allocation ID (required):", allocationId);
-            remoteUserId = EditorGUILayout.TextField("Remote User ID (required):", remoteUserId);
+            remoteUserId = EditorGUILayout.TextField("Remote User ID (required, Developers need to provide their own remote user id (For example unique user account id)):", remoteUserId);
             
             EditorGUILayout.Space();
             
@@ -78,14 +85,28 @@ namespace DotsEcoCertificateSDK
 
             EditorGUILayout.Space();
             
-            // Theme
-            EditorGUILayout.LabelField("Theme");
-            categoryTheme.name = EditorGUILayout.TextField("Category theme name:", categoryTheme.name);
-            categoryTheme.primary = EditorGUILayout.TextField("Primary color:", categoryTheme.primary);
-            categoryTheme.secondary = EditorGUILayout.TextField("Secondary color:", categoryTheme.secondary);
-            categoryTheme.tertiary = EditorGUILayout.TextField("Tertiary color:", categoryTheme.tertiary);
-            categoryTheme.background = EditorGUILayout.TextField("Background color:", categoryTheme.background);
-            categoryTheme.scratch_image_url = EditorGUILayout.TextField("Scratch image URL:", categoryTheme.scratch_image_url);
+            // Rendering
+            // rendering -> app -> logo_url
+            logoUrl = EditorGUILayout.TextField("Logo URL:", logoUrl);
+
+            // rendering -> certificate_header
+            certificateHeader = EditorGUILayout.TextField("Certificate header:", certificateHeader);
+            
+            // rendering -> greeting
+            greeting = EditorGUILayout.TextField("Greeting:", greeting);
+            
+            // rendering -> theme -> impact_type_category -> icon_url
+            EditorGUILayout.LabelField("Impact type category");
+            iconUrl = EditorGUILayout.TextField("Icon URL:", iconUrl);
+            
+            // rendering -> theme -> category_theme
+            EditorGUILayout.LabelField("Category theme");
+            categoryThemeName = EditorGUILayout.TextField("Category theme name:", categoryThemeName);
+            categoryThemePrimary = EditorGUILayout.TextField("Primary color:", categoryThemePrimary);
+            categoryThemeSecondary = EditorGUILayout.TextField("Secondary color:", categoryThemeSecondary);
+            categoryThemeTertiary = EditorGUILayout.TextField("Tertiary color:", categoryThemeTertiary);
+            categoryThemeBackground = EditorGUILayout.TextField("Background color:", categoryThemeBackground);
+            categoryThemeScratchImageUrl = EditorGUILayout.TextField("Scratch image URL:", categoryThemeScratchImageUrl);
 
             bool canSend = !string.IsNullOrEmpty(appToken) && !string.IsNullOrEmpty(impactQty) &&
                            !string.IsNullOrEmpty(allocationId) && !string.IsNullOrEmpty(remoteUserId);
@@ -126,6 +147,11 @@ namespace DotsEcoCertificateSDK
                 return;
             }
 
+            rendering = new Rendering(new App(logoUrl), certificateHeader, greeting,
+                new Theme(new ImpactTypeCategory(iconUrl), 
+                    new CategoryTheme(categoryThemeName, categoryThemePrimary, categoryThemeSecondary, 
+                        categoryThemeTertiary, categoryThemeBackground, categoryThemeScratchImageUrl)));
+
             CreateCertificateRequestBuilder builder =
                 new CreateCertificateRequestBuilder(appToken, int.Parse(allocationId), int.Parse(impactQty),
                         remoteUserId)
@@ -136,8 +162,8 @@ namespace DotsEcoCertificateSDK
                     .WithCertificateInfo(certificateInfo)
                     .WithLangCode(langCode)
                     .WithCurrency(currency)
-                    .WithGeolocation(geolocation);
-                    //.WithRendering(new Rendering(new Theme(categoryTheme)));
+                    .WithGeolocation(geolocation)
+                    .WithRendering(rendering);
 
             UnityWebRequest request = certificateService.CreateCertificateRequest(builder);
             var operation = request.SendWebRequest();
@@ -160,18 +186,9 @@ namespace DotsEcoCertificateSDK
                 {
                     logText = request.downloadHandler.text;
                     CertificateResponse certificate = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
-
-                }
-
-                if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
-                {
-                    logText += $"Error: {request.error}, Message: {request.downloadHandler.text}\n";
-                }
-                else
-                {
-                    logText += "Received certificate response: [{request.downloadHandler.text}]\n";
-                    CertificateResponse certificate = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
                     certificateUrl = certificate.certificate_url;
+                    PlayerPrefs.SetString(Constants.CertificateIDName, certificate.certificate_id);
+                    Debug.Log(PlayerPrefs.GetString(Constants.CertificateIDName));
                     if (!string.IsNullOrEmpty(certificate.certificate_image_url))
                     {
                         FetchImage(Regex.Unescape(certificate.certificate_image_url));

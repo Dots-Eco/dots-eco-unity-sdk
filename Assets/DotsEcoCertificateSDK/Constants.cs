@@ -7,11 +7,12 @@
         public static string ContentType = "application/json";
 
         public static string GetUrlPath = $"{BaseUrl}api/v1/certificate/";
-
-        //public static string CreateUrlPath = $"{BaseUrl}api/v1/certificate/add";
+        
         public static string CreateUrlPath = $"{BaseUrl}api/v1/certificate/add?format=sdk";
 
         internal static string ImpactSummaryPath =  $"{BaseUrl}api/v1/impact/summary-totals";
+
+        public static string CertificateIDName = "CertificateID";
         
         public static string FakeJSONResponse = @"
           {
