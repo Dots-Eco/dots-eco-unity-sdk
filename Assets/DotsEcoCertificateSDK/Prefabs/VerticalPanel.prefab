@@ -777,8 +777,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1481,6 +1481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   certificateHandler: {fileID: 0}
+  certificateViewCanvasGroup: {fileID: 0}
+  certificatesListCanvasGroup: {fileID: 0}
   mainContentBackgroundImage: {fileID: 5658393691500126067}
   certificateIDText: {fileID: 6463159735156172086}
   certificateIDLinkButton: {fileID: 8946501747993139620}

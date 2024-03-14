@@ -1,6 +1,8 @@
+using System.Net;
 using DotsEcoCertificateSDKUtility;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Utility;
 
@@ -12,7 +14,11 @@ namespace DotsEcoCertificateSDK
         private const string THANK_YOU_TEXT = "Thank You ";
 
         [SerializeField] private CertificateHandler certificateHandler;
-
+        
+        [SerializeField] private CanvasGroup certificateViewCanvasGroup;
+        [SerializeField] private CanvasGroup certificatesListCanvasGroup;
+        
+        [Header("Components")]
         [SerializeField] private Image mainContentBackgroundImage;
         
         [Header("Top")] 
@@ -53,8 +59,10 @@ namespace DotsEcoCertificateSDK
             certificateHandler.OnScratchMeTextureLoaded += OnScratchMeTextureLoaded;
             certificateHandler.OnAppLogoTextureLoaded += OnAppLogoTextureLoaded;
             certificateHandler.OnImpactLogoTextureLoaded += OnImpactLogoTextureLoaded;
+            
+            closeButton.onClick.AddListener(CloseButton);
         }
-        
+
         private void Start()
         {
             SetupButtons();            
@@ -65,6 +73,12 @@ namespace DotsEcoCertificateSDK
             impactInformationLinkButton.onClick.AddListener(() => Application.OpenURL(certificateHandler.HyperlinksConfig.ImpactInformation));
             termsOfUseLinkButton.onClick.AddListener(() => Application.OpenURL(certificateHandler.HyperlinksConfig.TermsOfUse));
             privacyPolicyLinkButton.onClick.AddListener(() => Application.OpenURL(certificateHandler.HyperlinksConfig.PrivacyPolice));
+        }
+        
+        private void CloseButton()
+        {
+            certificateViewCanvasGroup.Hide();
+            certificatesListCanvasGroup.Show();
         }
 
         private void OnCertificateLoaded(CertificateResponse certificateResponse)
@@ -90,7 +104,13 @@ namespace DotsEcoCertificateSDK
             }
 
             certificateIDText.text = $"{DOTS_ECO_CERTIFICATE_ID_TEXT}<u>{certificateResponse.certificate_id}</u>";
-            thankYouText.text = THANK_YOU_TEXT + certificateResponse.name_on_certificate;
+            
+            string certificateHeader = certificateResponse.rendering.certificate_header;
+            certificateHeader = WebUtility.HtmlDecode(certificateResponse.rendering.certificate_header);
+            string cleanCertificateHeader = certificateHeader.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
+            certificateTitleText.text = cleanCertificateHeader;
+            
+            thankYouText.text = THANK_YOU_TEXT + certificateResponse.name_on_certificate + "!";
             
             impactLocationText.text = certificateResponse.country;
 
@@ -100,10 +120,12 @@ namespace DotsEcoCertificateSDK
 
         private void OnCertificateTextureLoaded(Texture2D texture)
         {
+            Debug.Log("Certificate texture loaded");
             downloadCertificateButton.onClick.AddListener(() =>
             {
                 DeviceUtility.SaveCertificateImageToDevice(texture,
                     certificateHandler.CurrentCertificateResponse.certificate_id);
+                Debug.Log("Certificate image saved");
             });
         }
 

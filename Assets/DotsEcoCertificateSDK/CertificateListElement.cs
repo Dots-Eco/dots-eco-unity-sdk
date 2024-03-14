@@ -14,9 +14,7 @@ namespace DotsEcoCertificateSDK
     {
         private const string DOTS_ECO_CERTIFICATE_ID_TEXT = "Certificate #";
         private const string COUNTRY_PREFIX_TEXT = "in ";
-        
-        [SerializeField] private CertificateHandler certificateHandler;
-        
+
         [SerializeField] private Image certificateImage;
         
         [SerializeField] private TextMeshProUGUI certificateIdText;
@@ -30,18 +28,22 @@ namespace DotsEcoCertificateSDK
         
         [SerializeField] private bool showLogs = false;
         
+        private CertificateHandler _certificateHandler;
         private CanvasGroup _listCanvasGroup;
         private CanvasGroup _mainViewCanvasGroup;
         private CertificateResponse _certificateResponse;
 
-        public void Setup(CertificateResponse certificateResponse, CanvasGroup listCanvasGroup, CanvasGroup mainViewCanvasGroup)
+        public void Setup(CertificateResponse certificateResponse, CertificateHandler certificateHandler, CanvasGroup listCanvasGroup, CanvasGroup mainViewCanvasGroup)
         {
             _certificateResponse = certificateResponse;
+            
+            _certificateHandler = certificateHandler;
             
             _listCanvasGroup = listCanvasGroup;
             _mainViewCanvasGroup = mainViewCanvasGroup;
             
             certificateIdText.text = DOTS_ECO_CERTIFICATE_ID_TEXT + _certificateResponse.certificate_id;
+            
             string certificateHeader = _certificateResponse.rendering.certificate_header;
             certificateHeader = WebUtility.HtmlDecode(_certificateResponse.rendering.certificate_header);
             string cleanCertificateHeader = certificateHeader.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
@@ -52,11 +54,12 @@ namespace DotsEcoCertificateSDK
             
             StartCoroutine(LoadWebTexture(certificateResponse.rendering.app.logo_url, AppLogoTextureLoaded));
             
-            viewButton.onClick.AddListener(() => certificateHandler.SetupCertificate(_certificateResponse));
+            viewButton.onClick.AddListener(SetupViewButton);
         }
 
         private void SetupViewButton()
         {
+            _certificateHandler.SetupCertificate(_certificateResponse);
             _listCanvasGroup.Hide();
             _mainViewCanvasGroup.Show();
         }

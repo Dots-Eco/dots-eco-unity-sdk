@@ -3,6 +3,8 @@ using System.Collections;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
+using ScratchCardAsset;
 
 namespace DotsEcoCertificateSDK
 {
@@ -18,6 +20,8 @@ namespace DotsEcoCertificateSDK
         
         [SerializeField] private HyperlinksConfig hyperlinksConfig;
         
+        [SerializeField] private ScratchCardManager scratchCardManager;
+
         [SerializeField] private int certificateIndex = 0;
         
         [SerializeField] private bool showLogs = false;
@@ -39,6 +43,9 @@ namespace DotsEcoCertificateSDK
         {
             CurrentCertificateResponse = certificate;
             LoadCertificateImages(CurrentCertificateResponse);
+            
+            scratchCardManager.ClearScratchCard();
+            
             OnCertificateLoaded?.Invoke(CurrentCertificateResponse);
         }
 
@@ -46,6 +53,9 @@ namespace DotsEcoCertificateSDK
         {
             CurrentCertificateResponse = certificates[certificateIndex];
             LoadCertificateImages(CurrentCertificateResponse);
+            
+            scratchCardManager.ClearScratchCard();
+            
             OnCertificateLoaded?.Invoke(CurrentCertificateResponse);
         }
 
@@ -55,7 +65,7 @@ namespace DotsEcoCertificateSDK
             
             string certificateImageUrl = CurrentCertificateResponse.certificate_image_url;
             if (certificateImageUrl != "")
-            {
+            {                
                 StartCoroutine(LoadWebTexture(CurrentCertificateResponse.certificate_image_url, CertificateTextureLoaded));
             }
             
@@ -76,25 +86,29 @@ namespace DotsEcoCertificateSDK
         }
 
         private void CertificateTextureLoaded(Texture2D texture)
-        {
+        {            
+            if (showLogs) Debug.Log("CertificateTextureLoaded");
             CertificateTexture = texture;
             OnCertificateTextureLoaded?.Invoke(texture);
         }
 
         private void ScratchMeTextureLoaded(Texture2D texture)
         {
+            if (showLogs) Debug.Log("ScratchMeTextureLoaded");
             ScratchMeTexture = texture;
             OnScratchMeTextureLoaded?.Invoke(texture);
         }
         
         private void AppLogoTextureLoaded(Texture2D texture)
         {
+            if (showLogs) Debug.Log("AppLogoTextureLoaded");
             AppLogoTexture = texture;
             OnAppLogoTextureLoaded?.Invoke(texture);
         }
         
         private void ImpactLogoTextureLoaded(Texture2D texture)
         {
+            if (showLogs) Debug.Log("ImpactLogoTextureLoaded");
             ImpactLogoTexture = texture;
             OnImpactLogoTextureLoaded?.Invoke(texture);
         }
