@@ -15,60 +15,53 @@ namespace DotsEcoCertificateSDK
         public event Action<Texture2D> OnImpactLogoTextureLoaded;
         
         [SerializeField] private CertificateManagerBehaviour certificateManagerBehaviour;
-
-        [Header("Config")]
-        [SerializeField] private string appToken = "";
+        
         [SerializeField] private HyperlinksConfig hyperlinksConfig;
         
+        [SerializeField] private int certificateIndex = 0;
+        
         [SerializeField] private bool showLogs = false;
-        
-        private string certificateId = "";
 
-        public CertificateResponse CertificateResponse { get; private set; }
-        
+        public CertificateResponse CurrentCertificateResponse { get; private set; }
         public Texture2D CertificateTexture { get; private set; }
         public Texture2D ScratchMeTexture { get; private set; }
         public Texture2D AppLogoTexture { get; private set; }
         public Texture2D ImpactLogoTexture { get; private set; }
         
         public HyperlinksConfig HyperlinksConfig { get => hyperlinksConfig; private set => hyperlinksConfig = value; }
-
-        private void Start()
+        
+        private void Awake()
         {
-            certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
-            
-            // TODO: Remove when we can receive the certificate ID from the server
-            // if (certificateId == "")
-            // {
-            //     Debug.LogError("Certificate ID is required!");
-            //     //return;
-            // }
-            
-            certificateManagerBehaviour.GetCertificate(appToken, certificateId, OnGetCertificateSuccess, OnGetCertificateError);
+            certificateManagerBehaviour.OnGetCertificatesListSuccess += SetupCertificate;
         }
 
-        private void OnGetCertificateSuccess(CertificateResponse certificateResponse)
+        private void SetupCertificate(CertificateResponse[] certificates)
         {
-            if (showLogs)
-            {
-                Debug.Log($"Certificate {certificateId} has been loaded successfully.");
-                DebugCertificate(certificateResponse);
-            }
+            CurrentCertificateResponse = certificates[certificateIndex];
+            LoadCertificateImages(CurrentCertificateResponse);
+            OnCertificateLoaded?.Invoke(CurrentCertificateResponse);
+        }
 
-            CertificateResponse = certificateResponse;
+        private void LoadCertificateImages(CertificateResponse certificateResponse)
+        {
+            if (CurrentCertificateResponse == null) return;
             
-            OnCertificateLoaded?.Invoke(certificateResponse);
+            string certificateImageUrl = CurrentCertificateResponse.certificate_image_url;
+            if (certificateImageUrl != "")
+            {
+                StartCoroutine(LoadWebTexture(CurrentCertificateResponse.certificate_image_url, CertificateTextureLoaded));
+            }
             
-            StartCoroutine(LoadWebTexture(certificateResponse.certificate_image_url, CertificateTextureLoaded));
-            //StartCoroutine(LoadWebTexture(certificateResponse.rendering.theme.category_theme.scratch_image_url, ScratchMeTextureLoaded)); // TODO: This is loading SVG, we can't use it right now
+            // TODO: This is loading SVG, we can't use it right now
+            //StartCoroutine(LoadWebTexture(CurrentCertificateResponse.rendering.theme.category_theme.scratch_image_url, ScratchMeTextureLoaded));
             
-            string appLogoUrl = certificateResponse.rendering.theme.impact_type_category.icon_url;
+            string appLogoUrl = CurrentCertificateResponse.rendering.app.logo_url;
             if (appLogoUrl != "")
             {
                 StartCoroutine(LoadWebTexture(appLogoUrl, AppLogoTextureLoaded));
             }
 
-            string impactIconUrl = CertificateResponse.rendering.theme.impact_type_category.icon_url;
+            string impactIconUrl = CurrentCertificateResponse.rendering.theme.impact_type_category.icon_url;
             if (impactIconUrl != "")
             {
                 StartCoroutine(LoadWebTexture(impactIconUrl, ImpactLogoTextureLoaded));
@@ -98,11 +91,6 @@ namespace DotsEcoCertificateSDK
             ImpactLogoTexture = texture;
             OnImpactLogoTextureLoaded?.Invoke(texture);
         }
-
-        private void OnGetCertificateError(ErrorResponse errorResponse)
-        {
-            if (showLogs) Debug.Log("Failed to load certificate: " + errorResponse.message);
-        }
         
         private IEnumerator LoadWebTexture(string url, Action<Texture2D> onTextureLoaded, Action onError = null)
         {
@@ -125,49 +113,6 @@ namespace DotsEcoCertificateSDK
                 onError?.Invoke();
                 
                 if (showLogs) Debug.LogError("Failed to load web texture: " + textureRequest.error);
-            }
-        }
-
-        private static void DebugCertificate(CertificateResponse certificateResponse)
-        {
-            Debug.Log("certificate_id: " + certificateResponse.certificate_id);
-            Debug.Log("certificate_url: " + certificateResponse.certificate_url);
-            Debug.Log("certificate_image_url: " + certificateResponse.certificate_image_url);
-            Debug.Log("app_id: " + certificateResponse.app_id);
-            Debug.Log("app_name: " + certificateResponse.app_name);
-            Debug.Log("remote_user_id: " + certificateResponse.remote_user_id);
-            Debug.Log("name_on_certificate: " + certificateResponse.name_on_certificate);
-            Debug.Log("certificate_design: " + certificateResponse.certificate_design);
-            Debug.Log("certificate_info: " + certificateResponse.certificate_info);
-            Debug.Log("impact_qty: " + certificateResponse.impact_qty);
-            Debug.Log("impact_type_id: " + certificateResponse.impact_type_id);
-            Debug.Log("impact_type_name: " + certificateResponse.impact_type_name);
-            Debug.Log("impact_status: " + certificateResponse.impact_status);
-            Debug.Log("created_timestamp: " + certificateResponse.created_timestamp);
-            Debug.Log("allocation_id: " + certificateResponse.allocation_id);
-            Debug.Log("country: " + certificateResponse.country);
-            
-            Debug.Log("geolocation: " + certificateResponse.geolocation[0].lat);
-            Debug.Log("geolocation: " + certificateResponse.geolocation[0].lng);
-            
-            Debug.Log("App logo url: " + certificateResponse.rendering.app.logo_url);
-            
-            Debug.Log("Certificate header: " + certificateResponse.rendering.certificate_header);
-            Debug.Log("Greeting: " + certificateResponse.rendering.greeting);
-            
-            Debug.Log("impact type category: " + certificateResponse.rendering.theme.impact_type_category.icon_url);
-            
-            Debug.Log("theme name: " + certificateResponse.rendering.theme.category_theme.name);
-            Debug.Log("primary color: " + certificateResponse.rendering.theme.category_theme.primary);
-            Debug.Log("secondary color: " + certificateResponse.rendering.theme.category_theme.secondary);
-            Debug.Log("tertiary color: " + certificateResponse.rendering.theme.category_theme.tertiary);
-            Debug.Log("background color: " + certificateResponse.rendering.theme.category_theme.background);
-            Debug.Log("scratch image url: " + certificateResponse.rendering.theme.category_theme.scratch_image_url);
-
-            for (int i = 0; i < certificateResponse.geolocation.Count; i++)
-            {
-                Debug.Log($"Geolocation point {i}: lat: {certificateResponse.geolocation[i].lat}, " +
-                    $"lng: {certificateResponse.geolocation[i].lng}");
             }
         }
     }

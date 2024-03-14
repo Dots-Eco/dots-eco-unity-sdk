@@ -7,9 +7,18 @@ namespace DotsEcoCertificateSDK
 {
     public class CertificateManagerBehaviour : MonoBehaviour
     {
+        public event Action<CertificateResponse[]> OnGetCertificatesListSuccess;
+
         [SerializeField] private string authToken = "";
+        [SerializeField] private string appToken = "";
+        [SerializeField] private string userId = "";
+        
+        [SerializeField] private bool showLogs = false;
         
         private CertificateService certificateService;
+        private string certificateId = "";
+        
+        public CertificateResponse[] CertificatesArray { get; private set; }
 
         private void Awake()
         {
@@ -17,34 +26,98 @@ namespace DotsEcoCertificateSDK
             {
                 throw new ArgumentException("authToken is required!", nameof(authToken));
             }
+
             certificateService = new CertificateService(authToken);
         }
+        
+        private void Start()
+        {
+            certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
 
-        public void GetCertificate(string appToken, string certificateId, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
+            GetCertificatesList(appToken, userId, GetCertificatesListSuccess, GetCertificatesListError);
+        }
+        
+        private void GetCertificatesListSuccess(CertificateResponse[] certificates)
+        {
+            if (showLogs)
+            {
+                DebugCertificatesList(certificates);
+            }
+            
+            CertificatesArray = certificates;
+            OnGetCertificatesListSuccess?.Invoke(certificates);
+        }
+        
+        private void GetCertificatesListError(ErrorResponse errorResponse)
+        {
+            if (showLogs) Debug.Log("Failed to load certificates list: " + errorResponse);
+        }
+        
+        private void DebugCertificatesList(CertificateResponse[] certificates)
+        {
+            foreach (var certificate in certificates)
+            {
+                CertificateDebugger.DebugCertificateResponseAsJSONString(certificate);
+            }
+        }
+
+        public void GetCertificate(string appToken, string certificateId, System.Action<CertificateResponse> onSuccess,
+            System.Action<ErrorResponse> onError)
         {
             var request = certificateService.GetCertificateRequest(appToken, certificateId);
-            StartCoroutine(Send(request, onSuccess, onError));
+            StartCoroutine(SendSingleCertificateRequest(request, onSuccess, onError));
         }
 
-        public void GetCertificate(GetCertificateRequestBuilder builder, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
+        public void GetCertificate(GetCertificateRequestBuilder builder, System.Action<CertificateResponse> onSuccess,
+            System.Action<ErrorResponse> onError)
         {
             var request = certificateService.GetCertificateRequest(builder);
-            StartCoroutine(Send(request, onSuccess, onError));
+            StartCoroutine(SendSingleCertificateRequest(request, onSuccess, onError));
         }
 
-        public void CreateCertificate(string appToken, int allocationId, int impactQty, string remoteUserId, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
+        public void GetCertificatesList(string appToken, string userID, System.Action<CertificateResponse[]> onSuccess,
+            System.Action<ErrorResponse> onError)
+        {
+            var request = certificateService.GetCertificatesListRequest(appToken, userID);
+            StartCoroutine(SendCertificatesListRequest(request, onSuccess, onError));
+        }
+
+        public void CreateCertificate(string appToken, int allocationId, int impactQty, string remoteUserId,
+            System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
         {
             var request = certificateService.CreateCertificateRequest(appToken, allocationId, impactQty, remoteUserId);
-            StartCoroutine(Send(request, onSuccess, onError));
+            StartCoroutine(SendSingleCertificateRequest(request, onSuccess, onError));
         }
 
-        public void CreateCertificate(CreateCertificateRequestBuilder builder, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
+        public void CreateCertificate(CreateCertificateRequestBuilder builder,
+            System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
         {
             var request = certificateService.CreateCertificateRequest(builder);
-            StartCoroutine(Send(request, onSuccess, onError));
+            StartCoroutine(SendSingleCertificateRequest(request, onSuccess, onError));
         }
 
-        private IEnumerator Send(UnityWebRequest request, System.Action<CertificateResponse> onSuccess, System.Action<ErrorResponse> onError)
+        private IEnumerator SendSingleCertificateRequest(UnityWebRequest request, System.Action<CertificateResponse> onSuccess,
+            System.Action<ErrorResponse> onError)
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.ConnectionError ||
+                request.result == UnityWebRequest.Result.ProtocolError)
+            {
+                ErrorResponse errorResponse = JsonUtility.FromJson<ErrorResponse>(request.downloadHandler.text);
+                onError?.Invoke(errorResponse);
+            }
+            else
+            {
+                CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
+
+                if (showLogs) Debug.Log(response);
+                
+                onSuccess?.Invoke(response);
+            }
+        }
+
+        private IEnumerator SendCertificatesListRequest(UnityWebRequest request, System.Action<CertificateResponse[]> onSuccess, System.Action<ErrorResponse> onError)
         {
             yield return request.SendWebRequest();
 
@@ -55,11 +128,13 @@ namespace DotsEcoCertificateSDK
             }
             else
             {
-                CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(request.downloadHandler.text);
-                //CertificateResponse response = JsonUtility.FromJson<CertificateResponse>(Constants.FakeJSONResponse);
-                onSuccess?.Invoke(response);
+                string jsonResponse = request.downloadHandler.text;
+                CertificatesArray = JsonHelper.FromJson<CertificateResponse>("{ \"Items\": " + jsonResponse + "}");
+
+                if (showLogs) Debug.Log(CertificatesArray);
+                
+                onSuccess?.Invoke(CertificatesArray);
             }
         }
     }
-
 }

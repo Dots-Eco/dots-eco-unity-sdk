@@ -519,23 +519,27 @@ PrefabInstance:
       objectReference: {fileID: 1119243535}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.89166665
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.9492441
-      objectReference: {fileID: 0}
-    - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.8908784
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.03671706
+      value: 0.03445946
       objectReference: {fileID: 0}
     - target: {fileID: 5116223272241792374, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312601826098868735, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: userId
+      value: EcoHero
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312601826098868735, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: appToken
+      value: sandbox-429-0f4626af
       objectReference: {fileID: 0}
     - target: {fileID: 5412277156021870297, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x

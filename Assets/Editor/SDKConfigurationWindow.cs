@@ -47,7 +47,7 @@ namespace DotsEcoCertificateSDK
 
             if (!String.IsNullOrEmpty(sandboxAppToken) && GUILayout.Button("Create Certificate in Sandbox"))
             {
-                CreateSanboxCertificateWindow.ShowWindow();
+                CreateSandboxCertificateWindow.ShowWindow();
             }
 
             if (GUILayout.Button("Get Certificate"))

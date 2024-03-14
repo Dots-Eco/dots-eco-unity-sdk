@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
 namespace DotsEcoCertificateSDK
 {
-    public class CreateSanboxCertificateWindow : EditorWindow
+    public class CreateSandboxCertificateWindow : EditorWindow
     {
         private bool isSendingRequest = false;
         private CertificateService certificateService;
@@ -48,7 +46,7 @@ namespace DotsEcoCertificateSDK
         
         public static void ShowWindow()
         {
-            GetWindow<CreateSanboxCertificateWindow>("Create Certificate in Sandbox");
+            GetWindow<CreateSandboxCertificateWindow>("Create Certificate in Sandbox");
         }
 
         private void Awake()

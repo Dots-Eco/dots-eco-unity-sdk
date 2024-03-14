@@ -91,19 +91,6 @@ namespace DotsEcoCertificateSDK
 
             certificateIDText.text = $"{DOTS_ECO_CERTIFICATE_ID_TEXT}<u>{certificateResponse.certificate_id}</u>";
             thankYouText.text = THANK_YOU_TEXT + certificateResponse.name_on_certificate;
-
-            // TODO: Impact title
-            // if (certificateResponse.rendering.impact_title != null)
-            // {
-            //     string titleText = certificateResponse.rendering.impact_title;
-            //     string boldPart = "<b>" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[0].Trim() 
-            //         + "</b>\nwith" + titleText.Split(new string[] { "with" }, StringSplitOptions.None)[1];
-            //     certificateTitleText.text = boldPart;
-            // }
-            // else
-            // {
-            //     Debug.LogWarning("Warning: Certificate has no rendering impact title");
-            // }
             
             impactLocationText.text = certificateResponse.country;
 
@@ -116,7 +103,7 @@ namespace DotsEcoCertificateSDK
             downloadCertificateButton.onClick.AddListener(() =>
             {
                 DeviceUtility.SaveCertificateImageToDevice(texture,
-                    certificateHandler.CertificateResponse.certificate_id);
+                    certificateHandler.CurrentCertificateResponse.certificate_id);
             });
         }
 

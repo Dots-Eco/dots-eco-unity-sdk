@@ -26,6 +26,17 @@ namespace DotsEcoCertificateSDK
         {
             return PrepareRequest(builder);
         }
+        
+        public UnityWebRequest GetCertificatesListRequest(string appToken, string userID)
+        {
+            GetCertificatesListRequestBuilder builder = new GetCertificatesListRequestBuilder(appToken, userID);
+            return PrepareRequest(builder);
+        }
+        
+        public UnityWebRequest GetCertificatesListRequest(GetCertificatesListRequestBuilder builder)
+        {
+            return PrepareRequest(builder);
+        }
 
         public UnityWebRequest CreateCertificateRequest(string appToken, int allocationId, int impactQty, string remoteUserId)
         {
@@ -54,11 +65,6 @@ namespace DotsEcoCertificateSDK
             UnityWebRequest request = builder.BuildRequest();
             request.SetRequestHeader("auth-token", authToken);
             return request;
-        }
-
-        public object GetCertificateRequest(object testAppToken, string testCertificateId)
-        {
-            throw new NotImplementedException();
         }
     }
 }
