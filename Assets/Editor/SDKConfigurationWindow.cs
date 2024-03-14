@@ -29,7 +29,7 @@ namespace DotsEcoCertificateSDK
 
         private void OnGUI()
         {
-            authToken = EditorGUILayout.PasswordField("Authentication Token:", authToken);
+            authToken = EditorGUILayout.TextField("Authentication Token:", authToken);
             EditorPrefs.SetString(authTokenKey, authToken);
 
             sandboxAppToken = EditorGUILayout.TextField("Sandbox App Token:", sandboxAppToken);

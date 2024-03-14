@@ -130,8 +130,6 @@ namespace DotsEcoCertificateSDK
             {
                 string jsonResponse = request.downloadHandler.text;
                 CertificatesArray = JsonHelper.FromJson<CertificateResponse>("{ \"Items\": " + jsonResponse + "}");
-
-                if (showLogs) Debug.Log(CertificatesArray);
                 
                 onSuccess?.Invoke(CertificatesArray);
             }

@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Utility
+namespace DotsEcoCertificateSDKUtility
 {
     [RequireComponent(typeof(Button))]
     public class ShareButton : MonoBehaviour
@@ -33,7 +32,7 @@ namespace Utility
         private void ShareText()
         {
             
-#if (UNITY_ANDROID || UNITY_IOS)
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
             
             new NativeShare().SetSubject(shareSubject)
                 .SetText(shareMessage)

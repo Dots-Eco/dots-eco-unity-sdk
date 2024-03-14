@@ -5,24 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89da0a7-d483-44ec-89b7-65e940def5d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateDebugger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateDebugger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificatesListRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificatesListRequest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/JsonHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/JsonHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/GetCertificatesListWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/GetCertificatesListWindow.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateDebugger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateDebugger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateResponse.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateService.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Constants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Constants.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CreateCertificateRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CreateCertificateRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/DotsEcoCertificateSDK.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/DotsEcoCertificateSDK.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificateRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificateRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificatesListRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificatesListRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/IRequestBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/IRequestBuilder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/ImpactSummary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/ImpactSummary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/ImpactSummaryRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/ImpactSummaryRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/JsonHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/JsonHelper.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/HorizontalPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/HorizontalPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/VerticalPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/VerticalPanel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/CreateSanboxCertificateWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/CreateSanboxCertificateWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/SDKConfigurationWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/SDKConfigurationWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateViewSelector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Certificate/CertificateViewSelector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/ShareButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/ShareButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +64,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/47/1b052481/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/66/4370930f/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/91/097c8f33/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateDebugger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/GetCertificatesListRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/WORK/Argentics/DotsEco/dots-eco-unity-sdk/Assets/Scripts/Certificate/CertificateHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/WORK/Argentics/DotsEco/dots-eco-unity-sdk/Assets/Scripts/Certificate/CertificateHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/WORK/Argentics/DotsEco/dots-eco-unity-sdk/Assets/Scripts/Certificate/CertificateHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -108,10 +130,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="101148">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="101148" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -134,7 +156,9 @@
       <workItem from="1708345340483" duration="3157000" />
       <workItem from="1709035024067" duration="2808000" />
       <workItem from="1709553593233" duration="19550000" />
-      <workItem from="1710157239364" duration="39168000" />
+      <workItem from="1710157239364" duration="40507000" />
+      <workItem from="1710382225943" duration="638000" />
+      <workItem from="1710382992661" duration="402000" />
     </task>
     <servers />
   </component>
@@ -156,50 +180,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs</url>
-          <line>46</line>
-          <properties documentPath="D:\WORK\Argentics\DotsEco\dots-eco-unity-sdk\Assets\DotsEcoCertificateSDK\CertificateManagerBehaviour.cs" initialLine="42" containingFunctionPresentation="Method 'GetCertificatesListSuccess'">
-            <startOffsets>
-              <option value="1478" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1511" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs</url>
-          <line>47</line>
-          <properties documentPath="D:\WORK\Argentics\DotsEco\dots-eco-unity-sdk\Assets\DotsEcoCertificateSDK\CertificateManagerBehaviour.cs" initialLine="43" containingFunctionPresentation="Method 'GetCertificatesListSuccess'">
-            <startOffsets>
-              <option value="1524" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1575" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateManagerBehaviour.cs</url>
-          <line>41</line>
-          <properties documentPath="D:\WORK\Argentics\DotsEco\dots-eco-unity-sdk\Assets\DotsEcoCertificateSDK\CertificateManagerBehaviour.cs" initialLine="41" containingFunctionPresentation="Method 'GetCertificatesListSuccess'">
-            <startOffsets>
-              <option value="1358" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1371" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

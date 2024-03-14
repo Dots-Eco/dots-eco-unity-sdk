@@ -32,10 +32,17 @@ namespace DotsEcoCertificateSDK
         
         private void Awake()
         {
-            certificateManagerBehaviour.OnGetCertificatesListSuccess += SetupCertificate;
+            certificateManagerBehaviour.OnGetCertificatesListSuccess += SetupCertificateWithIndex;
         }
 
-        private void SetupCertificate(CertificateResponse[] certificates)
+        public void SetupCertificate(CertificateResponse certificate)
+        {
+            CurrentCertificateResponse = certificate;
+            LoadCertificateImages(CurrentCertificateResponse);
+            OnCertificateLoaded?.Invoke(CurrentCertificateResponse);
+        }
+
+        private void SetupCertificateWithIndex(CertificateResponse[] certificates)
         {
             CurrentCertificateResponse = certificates[certificateIndex];
             LoadCertificateImages(CurrentCertificateResponse);
