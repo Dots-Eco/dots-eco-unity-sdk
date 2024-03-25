@@ -2,7 +2,6 @@ using System.Net;
 using DotsEcoCertificateSDKUtility;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using Utility;
 
@@ -56,6 +55,7 @@ namespace DotsEcoCertificateSDK
         {
             certificateHandler.OnCertificateLoaded += OnCertificateLoaded;
             certificateHandler.OnCertificateTextureLoaded += OnCertificateTextureLoaded;
+            certificateHandler.OnLocationTextureLoaded += OnLocationTextureLoaded;
             certificateHandler.OnScratchMeTextureLoaded += OnScratchMeTextureLoaded;
             certificateHandler.OnAppLogoTextureLoaded += OnAppLogoTextureLoaded;
             certificateHandler.OnImpactLogoTextureLoaded += OnImpactLogoTextureLoaded;
@@ -106,27 +106,32 @@ namespace DotsEcoCertificateSDK
             certificateIDText.text = $"{DOTS_ECO_CERTIFICATE_ID_TEXT}<u>{certificateResponse.certificate_id}</u>";
             
             string certificateHeader = certificateResponse.rendering.certificate_header;
-            certificateHeader = WebUtility.HtmlDecode(certificateResponse.rendering.certificate_header);
-            string cleanCertificateHeader = certificateHeader.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
-            certificateTitleText.text = cleanCertificateHeader;
+            string cleanedCertificateHeader = WebUtilityDotsEco.ParseHTMLString(certificateHeader);
+            certificateTitleText.text = cleanedCertificateHeader;
             
             thankYouText.text = THANK_YOU_TEXT + certificateResponse.name_on_certificate + "!";
             
             impactLocationText.text = certificateResponse.country;
 
-            certificateIDLinkButton.onClick.AddListener(() => Application.OpenURL(certificateResponse.certificate_url));
+            // TODO: Rework to open subscribe window when ready
+            //certificateIDLinkButton.onClick.AddListener(() => Application.OpenURL(certificateResponse.certificate_url));
             shareButton.Link = certificateResponse.certificate_url;
         }
 
         private void OnCertificateTextureLoaded(Texture2D texture)
         {
-            Debug.Log("Certificate texture loaded");
+            //Debug.Log("Certificate texture loaded");
             downloadCertificateButton.onClick.AddListener(() =>
             {
                 DeviceUtility.SaveCertificateImageToDevice(texture,
                     certificateHandler.CurrentCertificateResponse.certificate_id);
-                Debug.Log("Certificate image saved");
+                //Debug.Log("Certificate image saved");
             });
+        }
+        
+        private void OnLocationTextureLoaded(Texture2D texture)
+        {
+            locationImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         }
 
         private void OnScratchMeTextureLoaded(Texture2D texture)

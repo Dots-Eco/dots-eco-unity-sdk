@@ -8,6 +8,7 @@ namespace DotsEcoCertificateSDK
     public class CertificateManagerBehaviour : MonoBehaviour
     {
         public event Action<CertificateResponse[]> OnGetCertificatesListSuccess;
+        public event Action OnGetCertificatesListError;
 
         [SerializeField] private string authToken = "";
         [SerializeField] private string appToken = "";
@@ -32,9 +33,17 @@ namespace DotsEcoCertificateSDK
         
         private void Start()
         {
-            certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
+            //certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
 
-            GetCertificatesList(appToken, userId, GetCertificatesListSuccess, GetCertificatesListError);
+            //GetCertificatesList(appToken, userId, GetCertificatesListSuccess, GetCertificatesListError);
+        }
+        
+        public void GetPredefinedCertificatesList()
+        {
+            var request = certificateService.GetCertificatesListRequest(appToken, userId);
+            
+            StartCoroutine(SendCertificatesListRequest(request, GetCertificatesListSuccess, 
+                GetCertificatesListError));
         }
         
         private void GetCertificatesListSuccess(CertificateResponse[] certificates)
@@ -50,7 +59,12 @@ namespace DotsEcoCertificateSDK
         
         private void GetCertificatesListError(ErrorResponse errorResponse)
         {
-            if (showLogs) Debug.Log("Failed to load certificates list: " + errorResponse);
+            if (showLogs)
+            {
+                Debug.Log("Failed to load certificates list: " + errorResponse.message);
+            }
+            
+            OnGetCertificatesListError?.Invoke();
         }
         
         private void DebugCertificatesList(CertificateResponse[] certificates)
@@ -80,6 +94,13 @@ namespace DotsEcoCertificateSDK
         {
             var request = certificateService.GetCertificatesListRequest(appToken, userID);
             StartCoroutine(SendCertificatesListRequest(request, onSuccess, onError));
+        }
+
+        // TODO: Temporary for presentation only
+        public void CreatePredefinedCertificate()
+        {
+            var request = certificateService.CreateCertificateRequest(appToken, 1, 44, userId);
+            StartCoroutine(SendSingleCertificateRequest(request, null, null));
         }
 
         public void CreateCertificate(string appToken, int allocationId, int impactQty, string remoteUserId,

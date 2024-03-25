@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 
 namespace DotsEcoCertificateSDK
 {
-    [System.Serializable]
+    [Serializable]
     public class CertificateResponse
     {
         public string certificate_id;
@@ -26,10 +27,12 @@ namespace DotsEcoCertificateSDK
         public Rendering rendering;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class Rendering
     {
         public App app;
+        public Project project;
+        public Allocation allocation;
         public string certificate_header;
         public string greeting;
         public Theme theme;
@@ -42,9 +45,11 @@ namespace DotsEcoCertificateSDK
             theme = new Theme();
         }
 
-        public Rendering(App App, string CertificateHeader, string Greeting, Theme Theme)
+        public Rendering(App App, Project Project, Allocation Allocation, string CertificateHeader, string Greeting, Theme Theme)
         {
             app = App;
+            project = Project;
+            allocation = Allocation;
             certificate_header = CertificateHeader;
             greeting = Greeting;
             theme = Theme;
@@ -56,7 +61,7 @@ namespace DotsEcoCertificateSDK
         }
     }
     
-    [System.Serializable]
+    [Serializable]
     public class Geolocation
     {
         public double lat;
@@ -75,7 +80,7 @@ namespace DotsEcoCertificateSDK
         }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class App
     {
         public string logo_url;
@@ -90,8 +95,32 @@ namespace DotsEcoCertificateSDK
             logo_url = LogoURL;
         }
     }
-    
-    [System.Serializable]
+
+    [Serializable]
+    public class Project
+    {
+        public string image_url;
+        public string location_image_url;
+
+        public Project(string ImageURL, string LocationImageURL)
+        {
+            image_url = ImageURL;
+            location_image_url = LocationImageURL;
+        }
+    }
+
+    [Serializable]
+    public class Allocation
+    {
+        public string image_url;
+
+        public Allocation(string ImageURL)
+        {
+            image_url = ImageURL;
+        }
+    }
+
+    [Serializable]
     public class Theme
     {
         public ImpactTypeCategory impact_type_category;
@@ -131,7 +160,7 @@ namespace DotsEcoCertificateSDK
         }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class CategoryTheme
     {
         public string name;
@@ -162,7 +191,7 @@ namespace DotsEcoCertificateSDK
         }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class ErrorResponse
     {
         public string message;

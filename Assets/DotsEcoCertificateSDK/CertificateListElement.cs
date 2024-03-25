@@ -44,10 +44,9 @@ namespace DotsEcoCertificateSDK
             
             certificateIdText.text = DOTS_ECO_CERTIFICATE_ID_TEXT + _certificateResponse.certificate_id;
             
-            string certificateHeader = _certificateResponse.rendering.certificate_header;
-            certificateHeader = WebUtility.HtmlDecode(_certificateResponse.rendering.certificate_header);
-            string cleanCertificateHeader = certificateHeader.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
-            titleText.text = cleanCertificateHeader;
+            string certificateHeader = certificateResponse.rendering.certificate_header;
+            string cleanedCertificateHeader = WebUtilityDotsEco.ParseHTMLString(certificateHeader);
+            titleText.text = cleanedCertificateHeader;
             
             countryText.text = COUNTRY_PREFIX_TEXT + _certificateResponse.country;
             shareButton.Link = _certificateResponse.certificate_url;

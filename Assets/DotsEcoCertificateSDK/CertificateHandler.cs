@@ -12,6 +12,7 @@ namespace DotsEcoCertificateSDK
     {
         public event Action<CertificateResponse> OnCertificateLoaded;
         public event Action<Texture2D> OnCertificateTextureLoaded;
+        public event Action<Texture2D> OnLocationTextureLoaded;
         public event Action<Texture2D> OnScratchMeTextureLoaded;
         public event Action<Texture2D> OnAppLogoTextureLoaded;
         public event Action<Texture2D> OnImpactLogoTextureLoaded;
@@ -28,6 +29,7 @@ namespace DotsEcoCertificateSDK
 
         public CertificateResponse CurrentCertificateResponse { get; private set; }
         public Texture2D CertificateTexture { get; private set; }
+        public Texture2D LocationTexture { get; private set; }
         public Texture2D ScratchMeTexture { get; private set; }
         public Texture2D AppLogoTexture { get; private set; }
         public Texture2D ImpactLogoTexture { get; private set; }
@@ -78,6 +80,12 @@ namespace DotsEcoCertificateSDK
                 StartCoroutine(LoadWebTexture(appLogoUrl, AppLogoTextureLoaded));
             }
 
+            string locationIconUrl = CurrentCertificateResponse.rendering.project.location_image_url;
+            if (locationIconUrl != "")
+            {
+                StartCoroutine(LoadWebTexture(locationIconUrl, LocationTextureLoaded));
+            }
+
             string impactIconUrl = CurrentCertificateResponse.rendering.theme.impact_type_category.icon_url;
             if (impactIconUrl != "")
             {
@@ -90,6 +98,13 @@ namespace DotsEcoCertificateSDK
             if (showLogs) Debug.Log("CertificateTextureLoaded");
             CertificateTexture = texture;
             OnCertificateTextureLoaded?.Invoke(texture);
+        }
+        
+        private void LocationTextureLoaded(Texture2D texture)
+        {
+            if (showLogs) Debug.Log("LocationTextureLoaded");
+            LocationTexture = texture;
+            OnLocationTextureLoaded?.Invoke(texture);
         }
 
         private void ScratchMeTextureLoaded(Texture2D texture)

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DotsEcoCertificateSDKUtility;
 using TMPro;
 using UnityEngine;
@@ -25,12 +26,14 @@ namespace DotsEcoCertificateSDK
         private void Awake()
         {
             certificateManagerBehaviour.OnGetCertificatesListSuccess += SetupCertificatesList;
+            certificateManagerBehaviour.OnGetCertificatesListError += OnGetCertificatesListError;
             
             closeButton.onClick.AddListener(Close);
         }
         
         public void Open()
         {
+            certificateManagerBehaviour.GetPredefinedCertificatesList();
             listCanvasGroup.Show();
         }
 
@@ -41,13 +44,24 @@ namespace DotsEcoCertificateSDK
 
         private void SetupCertificatesList(CertificateResponse[] certificates)
         {
+            foreach (Transform child in listContainer)
+            {
+                Destroy(child.gameObject);
+            }
+            
             certificatesCountText.text = certificates.Length + CERTIFICATES_COUNT_TEXT;
             
             foreach (CertificateResponse certificate in certificates)
             {
-                Instantiate(certificateListElementPrefab, listContainer)
-                    .Setup(certificate, certificateHandler, listCanvasGroup, mainViewCanvasGroup);
+                var certificateElement = Instantiate(certificateListElementPrefab, listContainer);
+                certificateElement.Setup(certificate, certificateHandler, 
+                    listCanvasGroup, mainViewCanvasGroup);
             }
+        }
+
+        private void OnGetCertificatesListError()
+        {
+            certificatesCountText.text = "0" + CERTIFICATES_COUNT_TEXT;
         }
     }
 }

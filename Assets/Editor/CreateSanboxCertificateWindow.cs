@@ -32,6 +32,8 @@ namespace DotsEcoCertificateSDK
 
         private string logoUrl = "https://nginx.staging.dots-eco-drupal.de3.amazee.io/sites/default/files/logo/Group%203308_3.png";
         
+        private string locationTextureUrl = "https://impact.dots.eco/sites/default/files/2024-03/Screenshot%202024-03-15%20at%2013.42.53.png";
+        
         private string certificateHeader = "&lt;p&gt;For planting, 10, tree&lt;/p&gt;";
         private string greeting = "&lt;p&gt;For greeting Dots.eco, 10, Dots.eco&lt;/p&gt;";
 
@@ -86,6 +88,9 @@ namespace DotsEcoCertificateSDK
             // Rendering
             // rendering -> app -> logo_url
             logoUrl = EditorGUILayout.TextField("Logo URL:", logoUrl);
+            
+            // rendering -> project -> location_url
+            locationTextureUrl = EditorGUILayout.TextField("Location URL:", locationTextureUrl);
 
             // rendering -> certificate_header
             certificateHeader = EditorGUILayout.TextField("Certificate header:", certificateHeader);
@@ -145,7 +150,8 @@ namespace DotsEcoCertificateSDK
                 return;
             }
 
-            rendering = new Rendering(new App(logoUrl), certificateHeader, greeting,
+            rendering = new Rendering(new App(logoUrl), new Project(null,locationTextureUrl), new Allocation(null), 
+                certificateHeader, greeting,
                 new Theme(new ImpactTypeCategory(iconUrl), 
                     new CategoryTheme(categoryThemeName, categoryThemePrimary, categoryThemeSecondary, 
                         categoryThemeTertiary, categoryThemeBackground, categoryThemeScratchImageUrl)));
