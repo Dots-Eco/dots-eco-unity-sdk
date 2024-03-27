@@ -6,15 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d89da0a7-d483-44ec-89b7-65e940def5d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificatesListManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificatesListManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateViewSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateViewSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/DotsEcoCertificateSDK.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/DotsEcoCertificateSDK.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridLayoutGroupPlus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridLayoutGroupPlus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/WebUtilityDotsEco.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/WebUtilityDotsEco.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridPlusScreenOrientationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridPlusScreenOrientationController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9d7fc877145d4138982bf12cdd3484c6175000/6b/845b9c30/RenderChain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/47/1b052481/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/66/4370930f/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/7a/15459606/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/91/097c8f33/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/FPSLimiter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasGroupController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,10 +97,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="71304">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="71304" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -133,7 +130,7 @@
       <workItem from="1710703693293" duration="908000" />
       <workItem from="1710848418772" duration="5941000" />
       <workItem from="1711407784431" duration="5178000" />
-      <workItem from="1711530961794" duration="3080000" />
+      <workItem from="1711530961794" duration="15313000" />
     </task>
     <servers />
   </component>

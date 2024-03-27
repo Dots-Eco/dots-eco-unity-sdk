@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DotsEcoCertificateSDKUtility;
 using TMPro;
@@ -9,6 +10,8 @@ namespace DotsEcoCertificateSDK
     public class CertificatesListManager : MonoBehaviour
     {
         private const string CERTIFICATES_COUNT_TEXT = " certificates";
+        
+        public event Action<CertificateResponse[]> OnListRetrieved;
         
         [SerializeField] private CertificateListElement certificateListElementPrefab;
         [SerializeField] private CertificateManagerBehaviour certificateManagerBehaviour;
@@ -22,10 +25,12 @@ namespace DotsEcoCertificateSDK
         [Header("Canvas groups")]
         [SerializeField] private CanvasGroup listCanvasGroup;
         [SerializeField] private CanvasGroup mainViewCanvasGroup;
+        
+        public CertificateResponse[] CertificateResponses { get; private set; }
 
         private void Awake()
         {
-            certificateManagerBehaviour.OnGetCertificatesListSuccess += SetupCertificatesList;
+            certificateManagerBehaviour.OnGetCertificatesListSuccess += OnGetCertificatesListSuccess;
             certificateManagerBehaviour.OnGetCertificatesListError += OnGetCertificatesListError;
             
             closeButton.onClick.AddListener(Close);
@@ -42,8 +47,12 @@ namespace DotsEcoCertificateSDK
             listCanvasGroup.Hide();
         }
 
-        private void SetupCertificatesList(CertificateResponse[] certificates)
+        private void OnGetCertificatesListSuccess(CertificateResponse[] certificates)
         {
+            CertificateResponses = certificates;
+            
+            OnListRetrieved?.Invoke(certificates);
+            
             foreach (Transform child in listContainer)
             {
                 Destroy(child.gameObject);

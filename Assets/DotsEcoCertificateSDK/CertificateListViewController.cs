@@ -1,35 +1,46 @@
 using System;
+using DotsEcoCertificateSDK;
+using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Utility;
 
 [RequireComponent(typeof(GridLayoutGroupPlus))]
-public class GridPlusScreenOrientationController : MonoBehaviour
+public class CertificateListViewController : MonoBehaviour
 {
+    [Header("Components")]
+    [SerializeField] private CertificatesListManager certificatesListManager;
     [SerializeField] private CanvasHelper canvasHelper;
     [SerializeField] private ScrollRect scrollRect;
+
+    [Header("Header components")]
+    [SerializeField] private RectTransform headerContainer;
+    [SerializeField] private TextMeshProUGUI walletText;
     
     [Header("Parameters")]
-    [SerializeField] private GridParameters verticalGridParameters;
-    [SerializeField] private GridParameters horizontalGridParameters;
-    
+    [SerializeField] private GridParameters verticalParameters;
+    [SerializeField] private GridParameters horizontalParameters;
+
     private GridLayoutGroupPlus gridLayoutGroupPlus;
     private RectTransform gridRectTransform;
+
+    private GridParameters currentGridParameters;
     
     private void Awake()
     {
         gridLayoutGroupPlus = GetComponent<GridLayoutGroupPlus>();
         gridRectTransform = GetComponent<RectTransform>();
+        
+        certificatesListManager.OnListRetrieved += OnListRetrieved;
     }
 
     private void Start()
     {
-        SetGridParameters(
-            canvasHelper.LastOrientation is ScreenOrientation.Portrait or ScreenOrientation.PortraitUpsideDown
-                ? verticalGridParameters
-                : horizontalGridParameters);
+        currentGridParameters = canvasHelper.LastOrientation is ScreenOrientation.Portrait or ScreenOrientation.PortraitUpsideDown
+                ? verticalParameters
+                : horizontalParameters;
+        
+        SetGridParameters(currentGridParameters);
     }
 
     private void OnEnable()
@@ -41,12 +52,20 @@ public class GridPlusScreenOrientationController : MonoBehaviour
     {
         CanvasHelper.OnScreenOrientationChanged -= OnScreenOrientationChanged;
     }
+    
+    private void OnListRetrieved(CertificateResponse[] certificates)
+    {
+        int certificatesCount = certificates.Length;
+        walletText.text = string.Format(currentGridParameters.walletString, certificatesCount);
+    }
 
     private void OnScreenOrientationChanged(ScreenOrientation orientation)
     {
-        SetGridParameters(orientation is ScreenOrientation.Portrait or ScreenOrientation.PortraitUpsideDown
-            ? verticalGridParameters
-            : horizontalGridParameters);
+        currentGridParameters = orientation is ScreenOrientation.Portrait or ScreenOrientation.PortraitUpsideDown
+            ? verticalParameters
+            : horizontalParameters;
+        
+        SetGridParameters(currentGridParameters);
     }
 
     private void SetGridParameters(GridParameters gridParameters)
@@ -72,11 +91,20 @@ public class GridPlusScreenOrientationController : MonoBehaviour
         
         scrollRect.vertical = gridParameters.scrollRectVerticalScrollEnabled;
         scrollRect.horizontal = gridParameters.scrollRectHorizontalScrollEnabled;
+        
+        headerContainer.anchorMin = gridParameters.headerContainerAnchorMin;
+        headerContainer.anchorMax = gridParameters.headerContainerAnchorMax;
+        
+        int certificatesCount = certificatesListManager.CertificateResponses?.Length ?? 0;
+        
+        walletText.fontSize = gridParameters.fontSize;
+        walletText.text = string.Format(gridParameters.walletString, certificatesCount);
     }
 
     [Serializable]
     private struct GridParameters
     {
+        [Header("Grid parameters")]
         public Vector2 anchoredPosition;
         public Vector2 sizeDelta;
         public Vector2 anchorMin;
@@ -95,5 +123,13 @@ public class GridPlusScreenOrientationController : MonoBehaviour
 
         public bool scrollRectVerticalScrollEnabled;
         public bool scrollRectHorizontalScrollEnabled;
+        
+        [Header("Header components parameters")]
+        public Vector2 headerContainerAnchorMin;
+        public Vector2 headerContainerAnchorMax;
+        
+        [Header("Header text")]
+        public string walletString;
+        public float fontSize;
     }
 }

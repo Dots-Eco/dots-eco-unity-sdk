@@ -495,7 +495,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192977363044886273, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 42.45
       objectReference: {fileID: 0}
     - target: {fileID: 192977363044886273, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_enableAutoSizing
@@ -505,8 +505,16 @@ PrefabInstance:
       propertyPath: SurfaceMaterial
       value: 
       objectReference: {fileID: 1456312348}
+    - target: {fileID: 1418176241596600707, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1433603250193673966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460166313312966994, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1586460348085081030, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
@@ -595,19 +603,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.9492441
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.9465909
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.05075594
       objectReference: {fileID: 0}
     - target: {fileID: 3587002448051298966, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.049065422
       objectReference: {fileID: 0}
     - target: {fileID: 4215364678404948534, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -625,13 +633,13 @@ PrefabInstance:
       propertyPath: userId
       value: eco_test_7
       objectReference: {fileID: 0}
-    - target: {fileID: 5312601826098868735, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: showLogs
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5412277156021870297, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458039154280995220, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520015280413272455, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -717,10 +725,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7934207610026583043, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-      propertyPath: certificateViewCanvasGroup
-      value: 
-      objectReference: {fileID: 2030886922}
     - target: {fileID: 8235972408554815694, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
       propertyPath: m_Material
       value: 
@@ -734,11 +738,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
---- !u!225 &2030886922 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 3873155478743303254, guid: 5b77fe9c6f6a1854896691b4788d51c0, type: 3}
-  m_PrefabInstance: {fileID: 1896588054}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
