@@ -7,7 +7,7 @@ namespace Utility
     [RequireComponent(typeof(Canvas))]
     public class CanvasHelper : MonoBehaviour
     {
-        public event Action<ScreenOrientation> OnScreenOrientationChanged;
+        public static event Action<ScreenOrientation> OnScreenOrientationChanged;
         public event Action OnResolutionChanged;
  
         [SerializeField] private RectTransform safeAreaTransform;

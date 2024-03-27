@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+ using UnityEngine.Serialization;
 
  namespace UnityEngine.UI
  {
@@ -191,25 +192,23 @@ using System.Collections.Generic;
              set { SetProperty(ref m_ConstraintCount, Mathf.Max(1, value)); }
          }
 
-         public CellSizeHandle m_HorizontalCellSizeHandle = CellSizeHandle.FixedPixelSize;
+         [SerializeField] private CellSizeHandle m_HorizontalCellSizeHandle = CellSizeHandle.FixedPixelSize;
 
          /// <summary>
          /// How to calculate cell width
          /// </summary>
-         [SerializeField]
-         protected CellSizeHandle horizontalCellSizeHandle
+         public CellSizeHandle HorizontalCellSizeHandle
          {
              get { return m_HorizontalCellSizeHandle; }
              set { SetProperty(ref m_HorizontalCellSizeHandle, value); }
          }
 
-         public CellSizeHandle m_VerticalCellSizeHandle = CellSizeHandle.FixedPixelSize;
+         [SerializeField] private CellSizeHandle m_VerticalCellSizeHandle = CellSizeHandle.FixedPixelSize;
 
          /// <summary>
          /// How to calculate cell height
          /// </summary>
-         [SerializeField]
-         protected CellSizeHandle verticalCellSizeHandle
+         public CellSizeHandle VerticalCellSizeHandle
          {
              get { return m_VerticalCellSizeHandle; }
              set { SetProperty(ref m_VerticalCellSizeHandle, value); }
@@ -226,8 +225,20 @@ using System.Collections.Generic;
              set { SetProperty(ref m_CellSize, value); }
          }
          
-         [SerializeField] protected bool ExpandParentHorizontally = false;
-         [SerializeField] protected bool ExpandParentVertically = false;
+         [SerializeField] protected bool expandParentHorizontally = false;
+         [SerializeField] protected bool expandParentVertically = false;
+         
+         public bool ExpandParentHorizontally
+         {
+             get { return expandParentHorizontally; }
+             set { SetProperty(ref expandParentHorizontally, value); }
+         }
+         
+         public bool ExpandParentVertically
+         {
+             get { return expandParentVertically; }
+             set { SetProperty(ref expandParentVertically, value); }
+         }
          
          protected RectTransform m_ParentRectTransform;
 
@@ -440,7 +451,7 @@ using System.Collections.Generic;
 
              float requiredSpaceX = actualCellCountX * cellSize.x + (actualCellCountX - 1) * spacing.x;
 
-             if (horizontalCellSizeHandle == CellSizeHandle.RelativeToTargetRectTransform) requiredSpaceX = 0;
+             if (HorizontalCellSizeHandle == CellSizeHandle.RelativeToTargetRectTransform) requiredSpaceX = 0;
 
              Vector2 requiredSpace = new Vector2(requiredSpaceX,
                  actualCellCountY * cellSize.y + (actualCellCountY - 1) * spacing.y);
@@ -470,13 +481,13 @@ using System.Collections.Generic;
                  if (cornerY == 1)
                      positionY = actualCellCountY - 1 - positionY;
 
-                 if (horizontalCellSizeHandle == CellSizeHandle.Stretch)
+                 if (HorizontalCellSizeHandle == CellSizeHandle.Stretch)
                  {
                      float stretchedSize = ((width - (spacing[0] * (actualCellCountX - 1))) / actualCellCountX);
                      SetChildAlongAxis(rectChildren[i], 0, startOffset.x + (stretchedSize + spacing[0]) * positionX,
                          stretchedSize);
                  }
-                 else if (horizontalCellSizeHandle == CellSizeHandle.RelativeToTargetRectTransform &&
+                 else if (HorizontalCellSizeHandle == CellSizeHandle.RelativeToTargetRectTransform &&
                           targetRectTransform != null)
                  {
                      float cellSizeX = cellSize.x * targetRectTransform.rect.size.x;
@@ -489,13 +500,13 @@ using System.Collections.Generic;
                          cellSize[0]);
                  }
 
-                 if (verticalCellSizeHandle == CellSizeHandle.Stretch)
+                 if (VerticalCellSizeHandle == CellSizeHandle.Stretch)
                  {
                      float stretchedSize = ((height - (spacing[1] * (actualCellCountY - 1))) / actualCellCountY);
                      SetChildAlongAxis(rectChildren[i], 1, startOffset.y + (stretchedSize + spacing[1]) * positionY,
                          stretchedSize);
                  }
-                 else if (verticalCellSizeHandle == CellSizeHandle.RelativeToTargetRectTransform &&
+                 else if (VerticalCellSizeHandle == CellSizeHandle.RelativeToTargetRectTransform &&
                           targetRectTransform != null)
                  {
                      float cellSizeY = cellSize.y * targetRectTransform.rect.size.y;
@@ -521,17 +532,17 @@ using System.Collections.Generic;
 
              Vector2 parentSizeDelta = m_ParentRectTransform.sizeDelta;
              
-             float parentSizeHorizontal = ExpandParentHorizontally ? 0 : parentSizeDelta.x;
-             float parentSizeVertical = ExpandParentVertically ? 0 : parentSizeDelta.y;
+             float parentSizeHorizontal = expandParentHorizontally ? 0 : parentSizeDelta.x;
+             float parentSizeVertical = expandParentVertically ? 0 : parentSizeDelta.y;
              
              foreach (RectTransform child in rectChildren)
              {
-                 if (horizontalCellSizeHandle != CellSizeHandle.Stretch) parentSizeHorizontal += child.sizeDelta.x;
-                 if (verticalCellSizeHandle != CellSizeHandle.Stretch) parentSizeVertical += child.sizeDelta.y;
+                 if (HorizontalCellSizeHandle != CellSizeHandle.Stretch) parentSizeHorizontal += child.sizeDelta.x;
+                 if (VerticalCellSizeHandle != CellSizeHandle.Stretch) parentSizeVertical += child.sizeDelta.y;
              }
 
-             if (horizontalCellSizeHandle != CellSizeHandle.Stretch) parentSizeHorizontal += (rectChildren.Count - 1) * spacing.x;
-             if (verticalCellSizeHandle != CellSizeHandle.Stretch) parentSizeVertical += (rectChildren.Count - 1) * spacing.y;
+             if (HorizontalCellSizeHandle != CellSizeHandle.Stretch) parentSizeHorizontal += (rectChildren.Count - 1) * spacing.x;
+             if (VerticalCellSizeHandle != CellSizeHandle.Stretch) parentSizeVertical += (rectChildren.Count - 1) * spacing.y;
             
              m_ParentRectTransform.sizeDelta = new Vector2(parentSizeHorizontal, parentSizeVertical);
          }

@@ -97,9 +97,9 @@ namespace DotsEcoCertificateSDK
         }
 
         // TODO: Temporary for presentation only
-        public void CreatePredefinedCertificate()
+        public void CreatePredefinedCertificate(int allocationId)
         {
-            var request = certificateService.CreateCertificateRequest(appToken, 1, 44, userId);
+            var request = certificateService.CreateCertificateRequest(appToken, allocationId, 44, userId);
             StartCoroutine(SendSingleCertificateRequest(request, null, null));
         }
 

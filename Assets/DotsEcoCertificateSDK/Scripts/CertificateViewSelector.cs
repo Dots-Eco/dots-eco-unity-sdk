@@ -1,3 +1,4 @@
+using DotsEcoCertificateSDKUtility;
 using UnityEngine;
 using UnityEngine.UI;
 using Utility;
@@ -15,6 +16,8 @@ namespace DotsEcoCertificateSDK
         
         [SerializeField] private GameObject verticalView;
         [SerializeField] private GameObject horizontalView;
+        
+        [SerializeField] private CanvasGroup certificateViewCanvasGroup;
 
         private void Start()
         {
@@ -26,12 +29,22 @@ namespace DotsEcoCertificateSDK
 
         private void OnEnable()
         {
-            canvasHelper.OnScreenOrientationChanged += SelectView;
+            CanvasHelper.OnScreenOrientationChanged += SelectView;
         }
         
         private void OnDisable()
         {
-            canvasHelper.OnScreenOrientationChanged -= SelectView;
+            CanvasHelper.OnScreenOrientationChanged -= SelectView;
+        }
+        
+        public void ShowCertificateView()
+        {
+            certificateViewCanvasGroup.Show();
+        }
+        
+        public void HideCertificateView()
+        {
+            certificateViewCanvasGroup.Hide();
         }
 
         private void SelectView(ScreenOrientation screenOrientation)
