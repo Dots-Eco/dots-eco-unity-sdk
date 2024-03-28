@@ -1,4 +1,5 @@
 using DotsEcoCertificateSDK;
+using DotsEcoCertificateSDK.Scripts.Utility;
 using UnityEngine;
 
 namespace ScratchCardAsset
@@ -28,12 +29,17 @@ namespace ScratchCardAsset
             if (progress >= autofillThreshold)
             {
                 scratchCardManager.Card.Fill();
+                DotsEcoPlayerPrefsHelper.AddScratchedCertificate(certificateHandler.CurrentCertificateResponse.certificate_id);
             }
         }
         
         private void OnCertificateLoaded(CertificateResponse certificateResponse)
         {
-            
+            var isScratched = DotsEcoPlayerPrefsHelper.IsScratched(certificateResponse.certificate_id);
+            if (isScratched)
+            {
+                scratchCardManager.Card.Fill();
+            }
         }
     }
 }
