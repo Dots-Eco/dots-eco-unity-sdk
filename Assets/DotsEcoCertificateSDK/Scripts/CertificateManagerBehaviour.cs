@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.Networking;
 using System;
 
-namespace DotsEcoCertificateSDK
+namespace DotsEcoCertificateSDK 
 {
     public class CertificateManagerBehaviour : MonoBehaviour
     {
