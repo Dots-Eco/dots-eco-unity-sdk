@@ -6,6 +6,7 @@ using DotsEcoCertificateSDKUtility;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace DotsEcoCertificateSDK
@@ -15,7 +16,7 @@ namespace DotsEcoCertificateSDK
         private const string DOTS_ECO_CERTIFICATE_ID_TEXT = "Certificate #";
         private const string COUNTRY_PREFIX_TEXT = "in ";
 
-        [SerializeField] private Image certificateImage;
+        [SerializeField] private Image certificateBackgroundImage;
         
         [SerializeField] private TextMeshProUGUI certificateIdText;
         [SerializeField] private TextMeshProUGUI titleText;
@@ -52,6 +53,7 @@ namespace DotsEcoCertificateSDK
             shareButton.Link = _certificateResponse.certificate_url;
             
             StartCoroutine(LoadWebTexture(certificateResponse.rendering.app.logo_url, AppLogoTextureLoaded));
+            StartCoroutine(LoadWebTexture(certificateResponse.rendering.allocation.image_url, AllocationImageLoaded));
             
             viewButton.onClick.AddListener(SetupViewButton);
         }
@@ -66,6 +68,11 @@ namespace DotsEcoCertificateSDK
         private void AppLogoTextureLoaded(Texture2D texture)
         {
             appIconImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        }
+        
+        private void AllocationImageLoaded(Texture2D texture)
+        {
+            certificateBackgroundImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         }
         
         private IEnumerator LoadWebTexture(string url, Action<Texture2D> onTextureLoaded, Action onError = null)

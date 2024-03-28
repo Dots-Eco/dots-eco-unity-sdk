@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31aa9faaf76038c40be59c43d17ef998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  certificateImage: {fileID: 0}
+  certificateBackgroundImage: {fileID: 4097291619285132308}
   certificateIdText: {fileID: 7470462922234815887}
   titleText: {fileID: 1914867164492542917}
   countryText: {fileID: 4250631647910372384}
