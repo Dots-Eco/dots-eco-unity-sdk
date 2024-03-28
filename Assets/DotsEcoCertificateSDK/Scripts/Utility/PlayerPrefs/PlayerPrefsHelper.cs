@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DotsEcoCertificateSDK.Scripts.Utility
 {
-    internal static class PlayerPrefsHelper
+    public static class DotsEcoPlayerPrefsHelper
     {
         public static void AddScratchedCertificate(string certificateID)
         {
