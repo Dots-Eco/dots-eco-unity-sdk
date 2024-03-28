@@ -2773,6 +2773,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1586460348085081030}
     m_Modifications:
+    - target: {fileID: 5665539831687627625, guid: 831b24c8ca54d094d8a0dff3d577c962, type: 3}
+      propertyPath: certificateHandler
+      value: 
+      objectReference: {fileID: 605130552829193159}
     - target: {fileID: 8040329709600656383, guid: 831b24c8ca54d094d8a0dff3d577c962, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.84112144
