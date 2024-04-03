@@ -5,20 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89da0a7-d483-44ec-89b7-65e940def5d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/Configurations.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/Configurations.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/PlayerPrefsConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/PlayerPrefsConfig.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/PlayerPrefsHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/PlayerPrefsHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/PlayerPrefsTester.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/PlayerPrefsTester.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/ScratchedCertificatesData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/ScratchedCertificatesData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/TestMaskFixer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/TestMaskFixer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins-Regular SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins-Regular SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins-Regular.ttf.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +33,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/69/c914759a/CertificateHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c89d400069fc43cbaded4dc7459ed9f03600/8c/8e5beb95/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/34/5e8eeb8f/ScreenOrientation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/5a/22a61fa7/Screen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/FPSLimiter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasGroupController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridLayoutGroupPlus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/UIGridFitter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/WebUtilityDotsEco.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.softmask-for-ugui@b870d64b57/Scripts/Editor/SoftMaskEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.softmask-for-ugui@b870d64b57/Scripts/GraphicConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.softmask-for-ugui@b870d64b57/Scripts/SoftMask.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.softmask-for-ugui@b870d64b57/Scripts/SoftMaskable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.softmask-for-ugui@b870d64b57/Shaders/Resources/UI-Default-SoftMaskable.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.7/Editor/BurstPlatformAotSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.8/Scripts/Runtime/TMP_SubMeshUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/ContentSizeFitter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/GridLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/ILayoutElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Mask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Interface/LudiqGUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Core/Variables/VariablesSaver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.yasirkula.nativeshare@70c1cc8423/Plugins/NativeShare/NativeShare.cs" root0="SKIP_HIGHLIGHTING" />
@@ -48,6 +62,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2cJTUgjXYc9rdfX7ns3mElYPTnS" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,28 +74,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "scratch-card-only-once",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ui-update&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\dengl\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\dengl\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\dengl\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\97ole\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\97ole\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\97ole\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+}</component>
+  <component name="RunManager" selected="Attach to Unity Player.AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\WORK\Argentics\DotsEco\dots-eco-unity-sdk -debugCodeOptimization" />
@@ -105,16 +122,29 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="32668">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="32668" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
+    <configuration name="AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)" type="UnityPlayer" factoryName="UnityAttachToPlayer" temporary="true">
+      <option name="host" value="192.168.1.107" />
+      <option name="playerId" value="AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)" />
+      <option name="playerInstanceId" value="DotsEcoCertificateSDK" />
+      <option name="port" value="56167" />
+      <option name="projectName" value="DotsEcoCertificateSDK" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Attach to Unity Player.AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -139,6 +169,8 @@
       <workItem from="1710848418772" duration="5941000" />
       <workItem from="1711407784431" duration="5178000" />
       <workItem from="1711530961794" duration="15313000" />
+      <workItem from="1711964772373" duration="13039000" />
+      <workItem from="1712134642133" duration="640000" />
     </task>
     <servers />
   </component>
@@ -171,5 +203,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="UnityPlayer">
+        <watch expression="certificateBackgroundImage.GetComponents()" language="C#" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
