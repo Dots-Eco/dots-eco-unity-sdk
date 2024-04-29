@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity
+    path: Assets/DotsEcoCertificateSDK/Scenes/SDK Demo Scene.unity
     guid: 874b57809dc11bb4b985dd02ead475f2
   m_configObjects: {}

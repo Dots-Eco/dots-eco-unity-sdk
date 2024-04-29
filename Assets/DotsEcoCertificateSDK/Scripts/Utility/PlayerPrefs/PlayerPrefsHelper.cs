@@ -7,7 +7,7 @@ namespace DotsEcoCertificateSDK.Scripts.Utility
     {
         public static void AddScratchedCertificate(string certificateID)
         {
-            var key = Configurations.Instance.PlayerPrefsConfig.ScratchedCertificatesKey;
+            var key = Configurations.Instance.PlayerPrefsConfig.PlayerPrefsKeyScratched;
             var data = ReadJson(key, new ScratchedCertificatesData());
             if (data.ScratchedCertificateIDs.Contains(certificateID) == false)
                 data.ScratchedCertificateIDs.Add(certificateID);
@@ -16,14 +16,14 @@ namespace DotsEcoCertificateSDK.Scripts.Utility
 
         public static List<string> GetScratchedCertificates()
         {
-            var key = Configurations.Instance.PlayerPrefsConfig.ScratchedCertificatesKey;
+            var key = Configurations.Instance.PlayerPrefsConfig.PlayerPrefsKeyScratched;
             var data = ReadJson(key, new ScratchedCertificatesData());
             return data?.ScratchedCertificateIDs;
         }
 
         public static bool IsScratched(string certificateID, bool defaultValue = false)
         {
-            var key = Configurations.Instance.PlayerPrefsConfig.ScratchedCertificatesKey;
+            var key = Configurations.Instance.PlayerPrefsConfig.PlayerPrefsKeyScratched;
             var data = ReadJson(key, new ScratchedCertificatesData());
             return data.ScratchedCertificateIDs.Contains(certificateID);
         }

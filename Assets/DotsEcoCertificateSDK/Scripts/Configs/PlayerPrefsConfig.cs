@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DotsEcoCertificateSDK
 {
@@ -7,15 +8,15 @@ namespace DotsEcoCertificateSDK
     public class PlayerPrefsConfig : ScriptableObject
     {
         private const string DEFAULT_VALUE_SCRATCHED_CERTIFICATES_KEY = "dots-eco.scratched-certificates";
-        
-        [SerializeField] private string _scratchedCertificatesKey = DEFAULT_VALUE_SCRATCHED_CERTIFICATES_KEY;
+        [Header("Change PlayerPrefs keys if they conflict with keys in your project")][Space]
+        [SerializeField] private string _playerPrefsKeyScratched = DEFAULT_VALUE_SCRATCHED_CERTIFICATES_KEY;
 
-        public string ScratchedCertificatesKey => _scratchedCertificatesKey;
+        public string PlayerPrefsKeyScratched => _playerPrefsKeyScratched;
 
         #if UNITY_EDITOR
         private void Reset()
         {
-            _scratchedCertificatesKey = DEFAULT_VALUE_SCRATCHED_CERTIFICATES_KEY;
+            _playerPrefsKeyScratched = DEFAULT_VALUE_SCRATCHED_CERTIFICATES_KEY;
         }
         #endif
     }

@@ -14,8 +14,10 @@ namespace DotsEcoCertificateSDK
 
         [SerializeField] private HyperlinksConfig _hyperlinksConfig;
         [SerializeField] private PlayerPrefsConfig _playerPrefsConfig;
+        [SerializeField] private TokenConfig _tokenConfig;
 
         public HyperlinksConfig HyperlinksConfig => _hyperlinksConfig;
         public PlayerPrefsConfig PlayerPrefsConfig => _playerPrefsConfig;
+        public TokenConfig TokenConfig => _tokenConfig;
     }
 }
