@@ -2,35 +2,51 @@
 using System.Collections;
 using UnityEngine.Networking;
 using System;
+using DotsEcoCertificateSDKUtility;
+using UnityEngine.UI;
 
 namespace DotsEcoCertificateSDK 
 {
     public class CertificateManagerBehaviour : MonoBehaviour
     {
+        #region Singleton
+        
+        private static CertificateManagerBehaviour _instance;
+        public static CertificateManagerBehaviour Instance => _instance ? _instance : _instance = FindInstance();
+        private static CertificateManagerBehaviour FindInstance() => GameObject.FindObjectOfType<CertificateManagerBehaviour>();
+        
+        #endregion
+
+        public event Action OnGetCertificatesStart;
         public event Action<CertificateResponse[]> OnGetCertificatesListSuccess;
         public event Action OnGetCertificatesListError;
 
-        [SerializeField] private string authToken = "";
-        [SerializeField] private string appToken = "";
-        [SerializeField] private string userId = "";
-        
         [SerializeField] private bool showLogs = false;
         
         private CertificateService certificateService;
         private string certificateId = "";
+        private string userId = "";
         
         public CertificateResponse[] CertificatesArray { get; private set; }
 
         private void Awake()
         {
-            if (string.IsNullOrEmpty(authToken))
+            DontDestroyOnLoad(gameObject);
+        }
+
+        public void StartService(string userID)
+        {
+            if (string.IsNullOrEmpty(Configurations.Instance.TokenConfig.AuthToken))
             {
-                throw new ArgumentException("authToken is required!", nameof(authToken));
+                throw new ArgumentException("authToken is required!", nameof(Configurations.Instance.TokenConfig.AuthToken));
             }
 
-            certificateService = new CertificateService(authToken);
+            userId = userID;
+            certificateService = new CertificateService(Configurations.Instance.TokenConfig.AuthToken);
         }
-        
+
+        public void OpenWallet() => GetPredefinedCertificatesList();
+         
         private void Start()
         {
             //certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
@@ -40,7 +56,8 @@ namespace DotsEcoCertificateSDK
         
         public void GetPredefinedCertificatesList()
         {
-            var request = certificateService.GetCertificatesListRequest(appToken, userId);
+            OnGetCertificatesStart?.Invoke();
+            var request = certificateService.GetCertificatesListRequest(Configurations.Instance.TokenConfig.AppToken, userId);
             
             StartCoroutine(SendCertificatesListRequest(request, GetCertificatesListSuccess, 
                 GetCertificatesListError));
@@ -99,7 +116,7 @@ namespace DotsEcoCertificateSDK
         // TODO: Temporary for presentation only
         public void CreatePredefinedCertificate(int allocationId)
         {
-            var request = certificateService.CreateCertificateRequest(appToken, allocationId, 44, userId);
+            var request = certificateService.CreateCertificateRequest(Configurations.Instance.TokenConfig.AppToken, allocationId, 44, userId);
             StartCoroutine(SendSingleCertificateRequest(request, null, null));
         }
 

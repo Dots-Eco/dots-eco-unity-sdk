@@ -5,23 +5,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using Utility;
 
-namespace DotsEcoCertificateSDKUtility
+namespace DotsEcoCertificateSDK
 {
     [RequireComponent(typeof(GridLayoutGroupPlus))]
 
     public class CertificateListViewController : MonoBehaviour
     {
-        [Header("Components")] [SerializeField]
-        private CanvasHelper canvasHelper;
+        [Header("Components")] 
+        [SerializeField] private CanvasHelper canvasHelper;
 
         [SerializeField] private ScrollRect scrollRect;
         [SerializeField] private RectTransform shadowOverlayRect;
 
-        [Header("Header components")] [SerializeField]
-        private RectTransform headerContainer;
+        [Header("Header components")] 
+        [SerializeField] private RectTransform headerContainer;
 
-        [Header("Parameters")] [SerializeField]
-        private GridParameters verticalParameters;
+        [Header("Parameters")] 
+        [SerializeField] private GridParameters verticalParameters;
 
         [SerializeField] private GridParameters horizontalParameters;
 

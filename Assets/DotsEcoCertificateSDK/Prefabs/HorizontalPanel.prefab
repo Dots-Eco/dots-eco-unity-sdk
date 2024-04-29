@@ -1008,7 +1008,6 @@ MonoBehaviour:
   certificateIDLinkButton: {fileID: 5684735045297053260}
   downloadCertificateButton: {fileID: 6150319158868103026}
   certificateTitleText: {fileID: 2518157239694994177}
-  closeButton: {fileID: 3985647856201793594}
   middleBackgroundImage: {fileID: 3668986094156906701}
   impactIconBackgroundImage: {fileID: 6950605868208192083}
   impactIconImage: {fileID: 8039234180519202264}
@@ -1933,7 +1932,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1727642697295724074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8126810886355613006}
+        m_TargetAssemblyTypeName: DotsEcoCertificateSDK.CertificateView, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7520788937742595291
 MonoBehaviour:
   m_ObjectHideFlags: 0

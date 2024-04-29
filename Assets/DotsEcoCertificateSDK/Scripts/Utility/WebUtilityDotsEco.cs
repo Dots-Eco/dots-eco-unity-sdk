@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 
-namespace DotsEcoCertificateSDKUtility
+namespace DotsEcoCertificateSDK
 {
     public static class WebUtilityDotsEco
     {

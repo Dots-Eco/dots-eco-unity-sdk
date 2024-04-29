@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Net;
 using System.Text.RegularExpressions;
+using DotsEcoCertificateSDK.Scripts.Utility;
 using DotsEcoCertificateSDKUtility;
 using TMPro;
 using UnityEngine;
@@ -28,6 +29,8 @@ namespace DotsEcoCertificateSDK
         [SerializeField] private Image appIconImage;
         
         [SerializeField] private bool showLogs = false;
+
+        [SerializeField] private LoadingAnimation _loadingAnimation;
         
         private CertificateHandler _certificateHandler;
         private CanvasGroup _listCanvasGroup;
@@ -56,6 +59,11 @@ namespace DotsEcoCertificateSDK
             StartCoroutine(LoadWebTexture(certificateResponse.rendering.allocation.image_url, AllocationImageLoaded));
             
             viewButton.onClick.AddListener(SetupViewButton);
+
+            if (_loadingAnimation)
+            {
+                _loadingAnimation.Play();
+            }
         }
 
         private void SetupViewButton()
@@ -73,6 +81,10 @@ namespace DotsEcoCertificateSDK
         private void AllocationImageLoaded(Texture2D texture)
         {
             certificateBackgroundImage.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+            if (_loadingAnimation)
+            {
+                _loadingAnimation.Stop();
+            }
         }
         
         private IEnumerator LoadWebTexture(string url, Action<Texture2D> onTextureLoaded, Action onError = null)

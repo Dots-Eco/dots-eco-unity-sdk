@@ -5,14 +5,279 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89da0a7-d483-44ec-89b7-65e940def5d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Data/DotsEcoTokenConfig.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Data/DotsEcoTokenConfig.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/INTEGRATION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/INTEGRATION.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images/placeholder_certificate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Default.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Default.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Hide Loading.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Hide Loading.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/New Animator Controller.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/New Animator Controller.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Show Card.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Show Card.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Show Loading.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Animation/Show Loading.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDK Demo Scene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/TokenConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/TokenConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/TestStarter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/TestStarter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/LoadingAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/LoadingAnimation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/MainCanvasActivator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/MainCanvasActivator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/UnityExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/UnityExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/SDKTestScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tests/Test data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/ASToolsUpdater.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/ASToolsUpdater.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater/Updater_Dark.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater/Updater_Dark.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater/Updater_Light.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater/Updater_Light.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater/Updater_Main.uss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/Styles/Updater/Updater_Main.uss.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Animation Clips.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Animation Clips.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Model Import Logs.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Model Import Logs.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Package Size.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Package Size.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckAnimationClips.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckAnimationClips.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckModelImportLogs.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckModelImportLogs.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckPackageSize.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckPackageSize.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/Utility/ModelUtility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/Utility/ModelUtility.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificatesListManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificatesListManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images/vertical layout - Unity MVP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images/vertical layout - Unity MVP.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images/placeholder_certificate.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/HorizontalPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/HorizontalPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Integer Input Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/Integer Input Block.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/VerticalPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/VerticalPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/Demo Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/Demo Scene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/SDKTestScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDKTestScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scenes/SDK Demo Scene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/Configurations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/Configurations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/PlayerPrefsConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Configs/PlayerPrefsConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/DotsEcoCertificateSDK.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/DotsEcoCertificateSDK.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/PlayerPrefsHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/PlayerPrefs/PlayerPrefsHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/WebUtilityDotsEco.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/WebUtilityDotsEco.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/TestMaskFixer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/TestMaskFixer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts/CursorSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts/CursorSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts/CursorSprite.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts/CursorSprite.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts/ScratchDemoUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts/ScratchDemoUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts/ScratchDemoUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts/ScratchDemoUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts/SpriteToggle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts/SpriteToggle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Scripts/SpriteToggle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Scripts/SpriteToggle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Brush_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Brush_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Brush_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Brush_1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Brush_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Brush_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Brush_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Brush_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Brush_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Brush_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Brush_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Brush_3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Button.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Button.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Button2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Button2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Button2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Button2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Check.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Check.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Check.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/CheckOff.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/CheckOff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/CheckOff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/CheckOff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/CheckOn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/CheckOn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/CheckOn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/CheckOn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Circle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Circle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Circle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Circle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Finger.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Finger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Finger.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Finger.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Image.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Image.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Image.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Plate.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Plate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Plate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Plate.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Rect.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Rect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/Rect.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/Rect.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/ScratchSurface.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/ScratchSurface.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Demo/Textures/ScratchSurface.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Demo/Textures/ScratchSurface.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/ScratchCard_Documentation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/ScratchCard_Documentation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/ScratchCard_Documentation.html.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/ScratchCard_Documentation.html.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.eot.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.eot.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.svg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.svg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.ttf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.woff.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.woff.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/fonts/OpenSans-Regular.woff2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/fonts/OpenSans-Regular.woff2.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/createScratchCard.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/createScratchCard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/createScratchCard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/createScratchCard.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/doc.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/doc.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/doc.svg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/doc.svg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/email.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/email.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/email.svg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/email.svg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/favicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/favicon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/logo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/logo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/migration.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/migration.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/migration.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/migration.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimation.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimation.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimation.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimation.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimation.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimation.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimationExample.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimationExample.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimationExample.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimationExample.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimationRecorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimationRecorder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimationRecorder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimationRecorder.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimator.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimator.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchAnimator.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchAnimator.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchCardManager.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchCardManager.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchCardManager.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchCardManager.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchCardManagerSetup.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchCardManagerSetup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/images/scratchCardManagerSetup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/images/scratchCardManagerSetup.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Documentation/style.css.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Documentation/style.css.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Example.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Example.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Example.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Example.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Manual.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Manual.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Manual.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Prefabs/ScratchCard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Prefabs/ScratchCard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Prefabs/ScratchCard.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Prefabs/ScratchCard.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation1_FromLeftToRightCorner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation1_FromLeftToRightCorner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation1_FromLeftToRightCorner.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation1_FromLeftToRightCorner.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation2_FromTopToBottom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation2_FromTopToBottom.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation2_FromTopToBottom.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation2_FromTopToBottom.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation3_FromRightToLeftCorner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation3_FromRightToLeftCorner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation3_FromRightToLeftCorner.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation3_FromRightToLeftCorner.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation4_FromBottomToTop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation4_FromBottomToTop.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation4_FromBottomToTop.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation4_FromBottomToTop.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation5_FromRightToLeft.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation5_FromRightToLeft.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation5_FromRightToLeft.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation5_FromRightToLeft.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation6_FromLeftToRight.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation6_FromLeftToRight.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation6_FromLeftToRight.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation6_FromLeftToRight.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation7_FromCenter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation7_FromCenter.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/ScratchAnimations/ScratchAnimation7_FromCenter.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/ScratchAnimations/ScratchAnimation7_FromCenter.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/BaseScratch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/BaseScratch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/BaseScratch.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/BaseScratch.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/LineScratch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/LineScratch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/LineScratch.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/LineScratch.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/ScratchAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/ScratchAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/ScratchAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/ScratchAnimation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/ScratchAnimationRecorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/ScratchAnimationRecorder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/ScratchAnimationRecorder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/ScratchAnimationRecorder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/ScratchAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/ScratchAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Animation/ScratchAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Animation/ScratchAnimator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/Constants.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/Constants.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/Enums.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/Enums.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/CanvasGraphicRaycaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/CanvasGraphicRaycaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/CanvasGraphicRaycaster.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/CanvasGraphicRaycaster.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/RaycastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/RaycastController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/RaycastController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/RaycastController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/ScratchCardInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/ScratchCardInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/ScratchCardInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/ScratchCardInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/ScratchCardInputData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/ScratchCardInputData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/InputData/ScratchCardInputData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/InputData/ScratchCardInputData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchCardRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchCardRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchCardRenderer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchCardRenderer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/BaseData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/BaseData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/BaseData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/BaseData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/ImageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/ImageData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/ImageData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/ImageData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/MeshRendererData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/MeshRendererData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/MeshRendererData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/MeshRendererData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/SpriteRendererData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/SpriteRendererData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/SpriteRendererData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/SpriteRendererData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/Triangle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/Triangle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Core/ScratchData/Triangle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Core/ScratchData/Triangle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor/ScratchAnimationInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor/ScratchAnimationInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor/ScratchAnimationInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor/ScratchAnimationInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor/ScratchCardManagerInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor/ScratchCardManagerInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor/ScratchCardManagerInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor/ScratchCardManagerInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor/ScratchCardMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor/ScratchCardMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Editor/ScratchCardMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Editor/ScratchCardMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/EraseProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/EraseProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/EraseProgress.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/EraseProgress.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/ScratchCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/ScratchCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/ScratchCard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/ScratchCard.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/ScratchCardAutofill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/ScratchCardAutofill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/ScratchCardAutofill.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/ScratchCardAutofill.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/ScratchCardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/ScratchCardManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/ScratchCardManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/ScratchCardManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools/EventSystemHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools/EventSystemHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools/EventSystemHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools/EventSystemHelper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools/MeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools/MeshGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools/MeshGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools/MeshGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools/MigrationHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools/MigrationHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Scripts/Tools/MigrationHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Scripts/Tools/MigrationHelper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders/Brush.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders/Brush.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders/Brush.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders/Brush.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders/Mask.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders/Mask.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders/Mask.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders/Mask.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders/MaskProgress.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders/MaskProgress.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/Shaders/MaskProgress.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/Shaders/MaskProgress.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/v.2.0_API_Changes.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/v.2.0_API_Changes.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScratchCard/v.2.0_API_Changes.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Plugins/ScratchCard/v.2.0_API_Changes.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/AssetStoreTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/AssetStoreTools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/AssetStoreUploader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/AssetStoreUploader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/AssetStoreAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/AssetStoreAPI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/Data/ASAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/Data/ASAnalytics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/PackageView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/PackageView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/Workflows/FolderUploadWorkflowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/Workflows/FolderUploadWorkflowView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/Workflows/HybridPackageUploadWorkflowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/Workflows/HybridPackageUploadWorkflowView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/Workflows/UploadWorkflowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Uploader/Scripts/UI Elements/Upload/Workflows/UploadWorkflowView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/ASToolsPreferences.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/ASToolsPreferences.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/FileUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/FileUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/StyleSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Utility/StyleSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/AssetStoreValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/AssetStoreValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Audio Clipping.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Check Audio Clipping.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckDemoScenes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckDemoScenes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckParticleSystems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/Tests/Test Methods/CheckParticleSystems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/UI Elements/AutomatedTestElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/UI Elements/AutomatedTestElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/UI Elements/AutomatedTestsGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/Editor/Validator/Scripts/UI Elements/AutomatedTestsGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.unity.asset-store-tools/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +290,14 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/69/c914759a/CertificateHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/f7/65bdb6da/UnityWebRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/817bf8064bb8498e889c3202581b1dc87000/da/b468b6e3/CanvasGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c89d400069fc43cbaded4dc7459ed9f03600/8c/8e5beb95/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/34/5e8eeb8f/ScreenOrientation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/5a/22a61fa7/Screen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/FPSLimiter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasGroupController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridLayoutGroupPlus.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,7 +321,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2cJTUgjXYc9rdfX7ns3mElYPTnS" />
   <component name="ProjectLevelVcsManager">
@@ -62,28 +332,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ui-update&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging ui-update",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\97ole\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\97ole\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\97ole\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\97ole\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\97ole\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\97ole\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Attach to Unity Player.AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)">
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\WORK\Argentics\DotsEco\dots-eco-unity-sdk -debugCodeOptimization" />
@@ -120,19 +390,6 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)" type="UnityPlayer" factoryName="UnityAttachToPlayer" temporary="true">
-      <option name="host" value="192.168.1.107" />
-      <option name="playerId" value="AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)" />
-      <option name="playerInstanceId" value="DotsEcoCertificateSDK" />
-      <option name="port" value="56167" />
-      <option name="projectName" value="DotsEcoCertificateSDK" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Attach to Unity Player.AndroidPlayer(11,Xiaomi_M2101K6G@192.168.1.107)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -157,11 +414,11 @@
       <workItem from="1710848418772" duration="5941000" />
       <workItem from="1711407784431" duration="5178000" />
       <workItem from="1711530961794" duration="15313000" />
-      <workItem from="1711964772373" duration="13039000" />
-      <workItem from="1712134642133" duration="2017000" />
-      <workItem from="1712238729880" duration="652000" />
-      <workItem from="1712563361451" duration="3034000" />
-      <workItem from="1713166391451" duration="936000" />
+      <workItem from="1713271570252" duration="16157000" />
+      <workItem from="1713425958654" duration="2232000" />
+      <workItem from="1713795472739" duration="801000" />
+      <workItem from="1713859665794" duration="1216000" />
+      <workItem from="1714132813608" duration="1785000" />
     </task>
     <servers />
   </component>
@@ -194,12 +451,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="UnityPlayer">
-        <watch expression="certificateBackgroundImage.GetComponents()" language="C#" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

@@ -25,8 +25,6 @@ namespace DotsEcoCertificateSDK
         [SerializeField] private Button certificateIDLinkButton;
         [SerializeField] private Button downloadCertificateButton;
         [SerializeField] private TextMeshProUGUI certificateTitleText;
-        [SerializeField] private Button closeButton;
-
 
         [Header("Middle")] 
         [SerializeField] private Image middleBackgroundImage;
@@ -59,8 +57,6 @@ namespace DotsEcoCertificateSDK
             certificateHandler.OnScratchMeTextureLoaded += OnScratchMeTextureLoaded;
             certificateHandler.OnAppLogoTextureLoaded += OnAppLogoTextureLoaded;
             certificateHandler.OnImpactLogoTextureLoaded += OnImpactLogoTextureLoaded;
-            
-            closeButton.onClick.AddListener(CloseButton);
         }
 
         private void Start()
@@ -75,10 +71,10 @@ namespace DotsEcoCertificateSDK
             privacyPolicyLinkButton.onClick.AddListener(() => Application.OpenURL(certificateHandler.HyperlinksConfig.PrivacyPolice));
         }
         
-        private void CloseButton()
+        public void Hide() 
         {
+            CertificateManagerBehaviour.Instance.GetPredefinedCertificatesList();
             certificateViewCanvasGroup.Hide();
-            certificatesListCanvasGroup.Show();
         }
 
         private void OnCertificateLoaded(CertificateResponse certificateResponse)
