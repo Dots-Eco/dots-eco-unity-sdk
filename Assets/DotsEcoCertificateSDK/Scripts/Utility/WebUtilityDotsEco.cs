@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 
-public static class WebUtilityDotsEco
+namespace DotsEcoCertificateSDKUtility
 {
-    public static string ParseHTMLString(string htmlString)
+    public static class WebUtilityDotsEco
     {
-        string parsedString = htmlString;
-        
-        parsedString = WebUtility.HtmlDecode(htmlString);
-            
-        parsedString = parsedString.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
-            
-        parsedString = parsedString.Replace("<strong>", "<b>").Replace("</strong>", "</b>");
+        public static string ParseHTMLString(string htmlString)
+        {
+            string parsedString = htmlString;
 
-        parsedString = parsedString.Replace("<br>", "\n");
-        
-        return parsedString;
+            parsedString = WebUtility.HtmlDecode(htmlString);
+
+            parsedString = parsedString.Replace("<p>", string.Empty).Replace("</p>", string.Empty);
+
+            parsedString = parsedString.Replace("<strong>", "<b>").Replace("</strong>", "</b>");
+
+            parsedString = parsedString.Replace("<br>", "\n");
+
+            return parsedString;
+        }
     }
+
 }
