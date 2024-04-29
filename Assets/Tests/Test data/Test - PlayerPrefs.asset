@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a905d581f8a4b2c8762041f71b46a66, type: 3}
-  m_Name: DotsEcoTokenConfig
+  m_Script: {fileID: 11500000, guid: c2e71b63ef3448d9947762703d54ccce, type: 3}
+  m_Name: Test - PlayerPrefs
   m_EditorClassIdentifier: 
-  _appToken: 16-312a4ef2
-  _authToken: 2f1348fb4a30e527e52e5e9fa887fb4c
+  _scratchedCertificatesKey: dots-eco.scratched-certificates

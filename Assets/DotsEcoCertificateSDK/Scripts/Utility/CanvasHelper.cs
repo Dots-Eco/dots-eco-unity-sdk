@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Utility
 {
@@ -12,6 +13,8 @@ namespace Utility
  
         [SerializeField] private RectTransform safeAreaTransform;
         [SerializeField] private bool showLogs = false;
+        [Space] 
+        [SerializeField] private UnityEvent<ScreenOrientation> ScreenOrientationChanged;
 
         private Vector2 _lastResolution = Vector2.zero;
         private Rect _lastSafeArea = Rect.zero;
@@ -69,6 +72,7 @@ namespace Utility
             LastOrientation = Screen.orientation;
             
             OnScreenOrientationChanged?.Invoke(Screen.orientation);
+            ScreenOrientationChanged?.Invoke(Screen.orientation);
         }
  
         private void ResolutionChanged()

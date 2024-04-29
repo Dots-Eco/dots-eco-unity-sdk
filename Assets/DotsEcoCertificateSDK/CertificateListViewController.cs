@@ -11,19 +11,17 @@ namespace DotsEcoCertificateSDK
 
     public class CertificateListViewController : MonoBehaviour
     {
-        [Header("Components")] [SerializeField]
-        private CertificatesListManager certificatesListManager;
-
+        [Header("Components")] 
         [SerializeField] private CanvasHelper canvasHelper;
+
         [SerializeField] private ScrollRect scrollRect;
+        [SerializeField] private RectTransform shadowOverlayRect;
 
-        [Header("Header components")] [SerializeField]
-        private RectTransform headerContainer;
+        [Header("Header components")] 
+        [SerializeField] private RectTransform headerContainer;
 
-        [SerializeField] private TextMeshProUGUI walletText;
-
-        [Header("Parameters")] [SerializeField]
-        private GridParameters verticalParameters;
+        [Header("Parameters")] 
+        [SerializeField] private GridParameters verticalParameters;
 
         [SerializeField] private GridParameters horizontalParameters;
 
@@ -36,8 +34,6 @@ namespace DotsEcoCertificateSDK
         {
             gridLayoutGroupPlus = GetComponent<GridLayoutGroupPlus>();
             gridRectTransform = GetComponent<RectTransform>();
-
-            certificatesListManager.OnListRetrieved += OnListRetrieved;
         }
 
         private void Start()
@@ -57,12 +53,6 @@ namespace DotsEcoCertificateSDK
         private void OnDisable()
         {
             CanvasHelper.OnScreenOrientationChanged -= OnScreenOrientationChanged;
-        }
-
-        private void OnListRetrieved(CertificateResponse[] certificates)
-        {
-            int certificatesCount = certificates.Length;
-            walletText.text = string.Format(currentGridParameters.walletString, certificatesCount);
         }
 
         private void OnScreenOrientationChanged(ScreenOrientation orientation)
@@ -98,13 +88,17 @@ namespace DotsEcoCertificateSDK
             scrollRect.vertical = gridParameters.scrollRectVerticalScrollEnabled;
             scrollRect.horizontal = gridParameters.scrollRectHorizontalScrollEnabled;
 
+            (scrollRect.transform as RectTransform).anchorMin = gridParameters.scrollRectAnchorMin;
+            (scrollRect.transform as RectTransform).anchorMax = gridParameters.scrollRectAnchorMax;
+
+            if (shadowOverlayRect)
+            {
+                shadowOverlayRect.anchorMin = gridParameters.scrollRectAnchorMin;
+                shadowOverlayRect.anchorMax = gridParameters.scrollRectAnchorMax;
+            }
+
             headerContainer.anchorMin = gridParameters.headerContainerAnchorMin;
             headerContainer.anchorMax = gridParameters.headerContainerAnchorMax;
-
-            int certificatesCount = certificatesListManager.CertificateResponses?.Length ?? 0;
-
-            walletText.fontSize = gridParameters.fontSize;
-            walletText.text = string.Format(gridParameters.walletString, certificatesCount);
         }
 
         [Serializable]
@@ -134,8 +128,8 @@ namespace DotsEcoCertificateSDK
 
             public Vector2 headerContainerAnchorMax;
 
-            [Header("Header text")] public string walletString;
-            public float fontSize;
+            [Header("ScrollRect")] public Vector2 scrollRectAnchorMin;
+            public Vector2 scrollRectAnchorMax;
         }
     }
 

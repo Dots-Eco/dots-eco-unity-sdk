@@ -51,10 +51,10 @@ namespace DotsEcoCertificateSDK
 
         private void OnGetCertificatesStart()
         {
-            for (int i = 0; i < listContainer.transform.childCount; i++)
-            {
-                Destroy(listContainer.transform.GetChild(i).gameObject);
-            }
+            // for (int i = 0; i < listContainer.transform.childCount; i++)
+            // {
+            //     Destroy(listContainer.transform.GetChild(i).gameObject);
+            // }
             listCanvasGroup.Show();
         }
 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d38409a204ee490b93cec225d73f0120, type: 3}
-  m_Name: DotsEcoHyperlinksConfig
+  m_Name: Test - Hyperlinks
   m_EditorClassIdentifier: 
   ImpactInformation: https://dots.eco/impact-information/
   TermsOfUse: https://dots.eco/terms-and-conditions/
