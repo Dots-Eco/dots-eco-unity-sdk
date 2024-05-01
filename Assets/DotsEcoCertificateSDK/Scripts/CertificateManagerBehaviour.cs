@@ -21,6 +21,7 @@ namespace DotsEcoCertificateSDK
         public event Action<CertificateResponse[]> OnGetCertificatesListSuccess;
         public event Action OnGetCertificatesListError;
 
+        [SerializeField] private GameObject _emailPopup;
         [SerializeField] private bool showLogs = false;
         
         private CertificateService certificateService;
@@ -46,6 +47,8 @@ namespace DotsEcoCertificateSDK
         }
 
         public void OpenWallet() => GetPredefinedCertificatesList();
+
+        public void ShowEmail() => _emailPopup.gameObject.SetActive(true);
          
         private void Start()
         {
