@@ -25,6 +25,7 @@ namespace DotsEcoCertificateSDK
         
         [SerializeField] private Button viewButton;
         [SerializeField] private ShareButton shareButton;
+        [SerializeField] private Button trackButton;
         
         [SerializeField] private Image appIconImage;
         
@@ -59,6 +60,7 @@ namespace DotsEcoCertificateSDK
             StartCoroutine(LoadWebTexture(certificateResponse.rendering.allocation.image_url, AllocationImageLoaded));
             
             viewButton.onClick.AddListener(SetupViewButton);
+            trackButton.onClick.AddListener(CertificateManagerBehaviour.Instance.ShowEmail);
 
             if (_loadingAnimation)
             {
