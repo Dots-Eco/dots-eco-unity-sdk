@@ -5,33 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89da0a7-d483-44ec-89b7-65e940def5d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/Generics/email_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/Generics/email_icon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/Generics/square_border_512px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/Generics/square_border_512px.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/email_notification.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/email_notification.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/email_notification_success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/email_notification_success.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email/EmailView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email/EmailView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/AutomaticDisabler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/AutomaticDisabler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/OrientationSwitcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/OrientationSwitcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/Trackers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Images 2/Trackers.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email/EmailContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email/EmailContext.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/ImpactSummaryProjectEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/ImpactSummaryProjectEntity.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/ImpactSummaryTotalEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/ImpactSummaryTotalEntity.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/Responses.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/Responses.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/View.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/View/ImpactRow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/View/ImpactRow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/View/ImpactView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Impact/View/ImpactView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/NotificationSubscriptionRequestBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/NotificationSubscriptionRequestBuilder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/OrientationSwitcherCustom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/OrientationSwitcherCustom.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dots-eco-unity-sdk/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CertificateCanvas_LOCAL_1490.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CertificateCanvas_LOCAL_1490.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CertificateCanvas_REMOTE_1490.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CertificateCanvas_REMOTE_1490.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificateListViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificatesListManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/CertificatesListManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia/georgia-bold-italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia/georgia-bold-italic SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia/georgia-italic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Georgia/georgia-italic SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins/Poppins-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins/Poppins-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins/Poppins-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Fonts/Poppins/Poppins-SemiBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Prefabs/CertificateListElement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/CertificateService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email/EmailView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Email/EmailView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/ImpactSummaryRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/ImpactSummaryRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/TestStarter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/TestStarter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/OrientationSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/OrientationSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ImpactSummaryWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ImpactSummaryWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Tests/SDKTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tests/SDKTestScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
@@ -44,7 +54,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/69/c914759a/CertificateHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/79/e9d482e1/DownloadHandlerBuffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/f5/001a8e84/UploadHandlerRaw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7bd1a2deca0f4abca7e2e5a91994141bc400/f7/65bdb6da/UnityWebRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/817bf8064bb8498e889c3202581b1dc87000/da/b468b6e3/CanvasGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c89d400069fc43cbaded4dc7459ed9f03600/8c/8e5beb95/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,6 +85,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/5a/22a61fa7/Screen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e97d84204f8d4aef92b538c5bab948f1172800/67/8f355f14/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/FPSLimiter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Dots Engineering/dots-eco-unity-sdk/Assets/DotsEcoCertificateSDK/Scripts/CertificateManagerBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/CanvasGroupController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/GridLayoutGroupPlus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DotsEcoCertificateSDK/Scripts/Utility/UIGridFitter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -90,7 +129,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;email&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;trackers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -133,10 +172,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24044">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="24044" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -173,7 +212,15 @@
       <workItem from="1713859665794" duration="1216000" />
       <workItem from="1714132813608" duration="1785000" />
       <workItem from="1714483230929" duration="4876000" />
-      <workItem from="1714512176633" duration="4897000" />
+      <workItem from="1714512176633" duration="5492000" />
+      <workItem from="1714731490223" duration="1404000" />
+      <workItem from="1715067310745" duration="709000" />
+      <workItem from="1715242340319" duration="4844000" />
+      <workItem from="1715334876487" duration="5822000" />
+      <workItem from="1715591870795" duration="2682000" />
+      <workItem from="1715595985190" duration="11438000" />
+      <workItem from="1715677049716" duration="10047000" />
+      <workItem from="1715758804987" duration="3814000" />
     </task>
     <servers />
   </component>
@@ -206,5 +253,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="JsonUtility.ToJson(new ImpactSummaryTotalResponse(){Items = new System.Collections.Generic.Dictionary&lt;string, ImpactSummaryTotalEntity&gt;(){{&quot;key&quot;, new ImpactSummaryTotalEntity(){}}}})" language="C#" />
+        <watch expression="JsonConvert.SerializeObject(new ImpactSummaryTotalResponse(){Items = new System.Collections.Generic.Dictionary&lt;string, ImpactSummaryTotalEntity&gt;(){{&quot;key&quot;, new ImpactSummaryTotalEntity(){}}}})" language="C#" />
+        <watch expression="new ImpactSummaryTotalResponse(){Items = new System.Collections.Generic.Dictionary&lt;string, ImpactSummaryTotalEntity&gt;(){{&quot;key&quot;, new ImpactSummaryTotalEntity(){}}}}" language="C#" />
+        <watch expression="JsonUtility.ToJson()" language="C#" />
+        <watch expression="&quot;{ \&quot;Items\&quot;: &quot; + request.downloadHandler.text + &quot;}&quot;" language="C#" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

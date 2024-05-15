@@ -1,14 +1,14 @@
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Utility;
 
-namespace DotsEcoCertificateSDK
+namespace DotsEcoCertificateSDK.Scripts.Utility
 {
-    internal class OrientationSwitcher : MonoBehaviour
+    public class OrientationSwitcherCustom : MonoBehaviour
     {
         [SerializeField] private CanvasHelper _canvasHelper;
-        [SerializeField] private GameObject _vertical;
-        [SerializeField] private GameObject _horizontal;
+        [SerializeField] private UnityEvent Portrait;
+        [SerializeField] private UnityEvent Landscape;
         
         public void OnOrientationChanged(ScreenOrientation screenOrientation)
         {
@@ -16,17 +16,14 @@ namespace DotsEcoCertificateSDK
             {
                 case ScreenOrientation.Portrait:
                 case ScreenOrientation.PortraitUpsideDown:
-                    _vertical.SetActive(true);
-                    _horizontal.SetActive(false);
+                    Portrait?.Invoke();
                     break;
                 case ScreenOrientation.LandscapeLeft: 
                 case ScreenOrientation.LandscapeRight:
-                    _vertical.SetActive(false);
-                    _horizontal.SetActive(true);
+                    Landscape?.Invoke();
                     break;
                 default:
-                    _vertical.SetActive(true);
-                    _horizontal.SetActive(false);
+                    Portrait?.Invoke();
                     break;
             }
         }

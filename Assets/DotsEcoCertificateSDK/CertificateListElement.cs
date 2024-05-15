@@ -60,12 +60,17 @@ namespace DotsEcoCertificateSDK
             StartCoroutine(LoadWebTexture(certificateResponse.rendering.allocation.image_url, AllocationImageLoaded));
             
             viewButton.onClick.AddListener(SetupViewButton);
-            trackButton.onClick.AddListener(CertificateManagerBehaviour.Instance.ShowEmail);
+            trackButton.onClick.AddListener(OpenEmailView);
 
             if (_loadingAnimation)
             {
                 _loadingAnimation.Play();
             }
+        }
+
+        private void OpenEmailView()
+        {
+            CertificateManagerBehaviour.Instance.ShowEmail(_certificateResponse.certificate_id);
         }
 
         private void SetupViewButton()

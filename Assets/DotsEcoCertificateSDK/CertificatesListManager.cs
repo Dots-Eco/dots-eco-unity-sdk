@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DotsEcoCertificateSDK.Impact;
 using DotsEcoCertificateSDKUtility;
 using TMPro;
 using UnityEngine;
@@ -25,6 +26,14 @@ namespace DotsEcoCertificateSDK
         [Header("Canvas groups")]
         [SerializeField] private CanvasGroup listCanvasGroup;
         [SerializeField] private CanvasGroup mainViewCanvasGroup;
+        
+        [Header("Impacts")] 
+        [SerializeField] private GameObject overlayHeader;
+        [SerializeField] private GameObject overlayHeader2;
+        [SerializeField] private ImpactRow userImpactRow;
+        [SerializeField] private ImpactRow userImpactRow2;
+        [SerializeField] private ImpactRow projectImpactRow;
+        [SerializeField] private ImpactRow projectImpactRow2;
         
         public CertificateResponse[] CertificateResponses { get; private set; }
 
@@ -56,6 +65,21 @@ namespace DotsEcoCertificateSDK
             //     Destroy(listContainer.transform.GetChild(i).gameObject);
             // }
             listCanvasGroup.Show();
+            
+            certificateManagerBehaviour.SendImpactUserRequest(OnUserRequestSuccess);
+            certificateManagerBehaviour.SendImpactUserRequest(OnCompanyRequestSuccess);
+        }
+
+        private void OnUserRequestSuccess(bool isSuccess, ImpactSummaryTotalResponse response)
+        {
+            userImpactRow.Setup(response);
+            userImpactRow2.Setup(response);
+        }
+
+        private void OnCompanyRequestSuccess(bool isSuccess, ImpactSummaryTotalResponse response)
+        {
+            projectImpactRow.Setup(response);
+            projectImpactRow2.Setup(response);
         }
 
         private void OnGetCertificatesListSuccess(CertificateResponse[] certificates)
@@ -82,6 +106,11 @@ namespace DotsEcoCertificateSDK
                 certificateElement.Setup(certificate, certificateHandler, 
                     listCanvasGroup, mainViewCanvasGroup);
             }
+            
+            if (overlayHeader)
+                overlayHeader.SetActive(certificates.Length > 0);
+            if (overlayHeader2)
+                overlayHeader2.SetActive(certificates.Length > 0);
         }
 
         private void OnGetCertificatesListError()

@@ -11,6 +11,8 @@ namespace DotsEcoCertificateSDK
     {
         private const string REGEX_EMAIL = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
 
+        [SerializeField] private EmailContext _context;
+        
         [SerializeField] private Image _border;
         [SerializeField] private GameObject _warningEmail;
         [SerializeField] private TMP_InputField _inputEmail;
@@ -25,12 +27,17 @@ namespace DotsEcoCertificateSDK
         {
             // TODO: backend request
             // _success?.Invoke();
+            
+            CertificateManagerBehaviour.Instance.SubscribeToEmailNotification(_context.CertificateId, _inputEmail.text, OnSubscribeResultListener);
+        }
 
+        private void OnSubscribeResultListener(bool isSubscribeSuccess)
+        {
             _rootEmail.SetActive(false);
             if (_emailFailure)
-                _emailFailure.SetActive(_toggle.isOn == false);
+                _emailFailure.SetActive(isSubscribeSuccess == false);
             if (_emailSuccess)
-                _emailSuccess.SetActive(_toggle.isOn);
+                _emailSuccess.SetActive(isSubscribeSuccess);            
         }
 
         public void OnInputChanged()
@@ -52,7 +59,7 @@ namespace DotsEcoCertificateSDK
             var isValidEmail = IsValidEmail();
             var canSubscribe = CanSubscribe();
 
-            _border.color = canSubscribe ? Color.black : Color.red;
+            _border.color = isValidEmail ? Color.black : Color.red;
             if (_warningEmail)
                 _warningEmail.SetActive(isValidEmail == false);
 

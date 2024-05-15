@@ -1,5 +1,6 @@
 using System;
 using DotsEcoCertificateSDK;
+using DotsEcoCertificateSDK.Impact;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

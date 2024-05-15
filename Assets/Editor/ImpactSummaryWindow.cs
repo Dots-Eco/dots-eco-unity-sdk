@@ -11,7 +11,6 @@ namespace DotsEcoCertificateSDK
     {
         private string appToken = "";
         private string remoteUserId = "";
-        private string companyId = "";
         private string logText = "";
         private Dictionary<string, ImpactSummary> impactSummaries = new Dictionary<string, ImpactSummary>();
         private Dictionary<string, List<Texture2D>> impactImages = new Dictionary<string, List<Texture2D>>();
@@ -45,7 +44,6 @@ namespace DotsEcoCertificateSDK
             EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.TextField("App Token:", appToken);
             EditorGUI.EndDisabledGroup();
-            companyId = EditorGUILayout.TextField("Company ID (required):", companyId);
             remoteUserId = EditorGUILayout.TextField("Remote User ID (required):", remoteUserId);
 
             EditorGUI.BeginDisabledGroup(isFetchingCertificates);
@@ -98,8 +96,8 @@ namespace DotsEcoCertificateSDK
         {
             logText = "";
             isFetchingCertificates = true;
-            logText += $"Fetching impact summary for company: {companyId}, appToken: {appToken}, userId: {remoteUserId}\n";
-            UnityWebRequest request = certificateService.ImpactSummaryByUserId(companyId, appToken, remoteUserId);
+            logText += $"Fetching impact summary for appToken: {appToken}, userId: {remoteUserId}\n";
+            UnityWebRequest request = certificateService.CreateImpactSummaryTotalsRequest(appToken, remoteUserId);
             var operation = request.SendWebRequest();
 
             EditorApplication.update += CheckRequestCompletion;

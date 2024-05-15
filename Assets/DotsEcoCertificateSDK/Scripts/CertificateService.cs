@@ -16,6 +16,12 @@ namespace DotsEcoCertificateSDK
             this.authToken = authToken;
         }
 
+        public UnityWebRequest SubscribeToEmailNotificationRequest(string authToken, string certificateId, string email)
+        {
+            var builder = new NotificationSubscriptionRequestBuilder(authToken, certificateId, email);
+            return PrepareRequest(builder);
+        }
+
         public UnityWebRequest GetCertificateRequest(string appToken, string certificateId)
         {
             GetCertificateRequestBuilder builder = new GetCertificateRequestBuilder(appToken, certificateId);
@@ -49,14 +55,15 @@ namespace DotsEcoCertificateSDK
             return PrepareRequest(builder);
         }
 
-        public UnityWebRequest ImpactSummaryByUserId(string companyId, string appToken, string remoteUserId)
+        public UnityWebRequest CreateImpactSummaryTotalsRequest(string appToken, string remoteUserId)
         {
-            ImpactSummaryRequestBuilder builder = new ImpactSummaryRequestBuilder(authToken, companyId, appToken, remoteUserId);
+            ImpactSummaryTotalsRequestBuilder builder = new ImpactSummaryTotalsRequestBuilder(authToken, appToken, remoteUserId);
             return PrepareRequest(builder);
         }
 
-        public UnityWebRequest ImpactSummaryByUserId(ImpactSummaryRequestBuilder builder)
+        public UnityWebRequest CreateImpactSummaryProjectRequest(string appToken, string remoteUserId)
         {
+            var builder = new ImpactSummaryCompanyRequestBuilder(authToken, appToken, remoteUserId);
             return PrepareRequest(builder);
         }
 

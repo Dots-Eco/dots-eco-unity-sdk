@@ -2,7 +2,10 @@
 using System.Collections;
 using UnityEngine.Networking;
 using System;
+using DotsEcoCertificateSDK.Impact;
 using DotsEcoCertificateSDKUtility;
+using Newtonsoft.Json;
+using UnityEditor.PackageManager;
 using UnityEngine.UI;
 
 namespace DotsEcoCertificateSDK 
@@ -21,7 +24,7 @@ namespace DotsEcoCertificateSDK
         public event Action<CertificateResponse[]> OnGetCertificatesListSuccess;
         public event Action OnGetCertificatesListError;
 
-        [SerializeField] private GameObject _emailPopup;
+        [SerializeField] private EmailContext _emailRoot;
         [SerializeField] private bool showLogs = false;
         
         private CertificateService certificateService;
@@ -48,13 +51,10 @@ namespace DotsEcoCertificateSDK
 
         public void OpenWallet() => GetPredefinedCertificatesList();
 
-        public void ShowEmail() => _emailPopup.gameObject.SetActive(true);
-         
-        private void Start()
+        public void ShowEmail(string certificateId)
         {
-            //certificateId = PlayerPrefs.GetString(Constants.CertificateIDName, "756369-430-178");
-
-            //GetCertificatesList(appToken, userId, GetCertificatesListSuccess, GetCertificatesListError);
+            _emailRoot.CertificateId = certificateId;
+            _emailRoot.gameObject.SetActive(true);
         }
         
         public void GetPredefinedCertificatesList()
@@ -64,6 +64,36 @@ namespace DotsEcoCertificateSDK
             
             StartCoroutine(SendCertificatesListRequest(request, GetCertificatesListSuccess, 
                 GetCertificatesListError));
+        }
+
+        public void SendImpactUserRequest(Action<bool, ImpactSummaryTotalResponse> onComplete)
+        {
+            var request = certificateService.CreateImpactSummaryTotalsRequest(Configurations.Instance.TokenConfig.AppToken, userId);
+            StartCoroutine(SendImpactTotalCoroutine(request, ImpactTotalError, onComplete));
+        }
+
+        public void SendImpactProjectRequest(Action<bool, ImpactSummaryTotalResponse> onComplete)
+        {
+            var request = certificateService.CreateImpactSummaryProjectRequest(Configurations.Instance.TokenConfig.AuthToken, null);
+            StartCoroutine(SendImpactTotalCoroutine(request, ImpactProjectError, onComplete));
+        }
+
+        internal void SubscribeToEmailNotification(string certificateId, string email, Action<bool> onComplete)
+        {
+            var request = certificateService.SubscribeToEmailNotificationRequest(Configurations.Instance.TokenConfig.AuthToken, certificateId, email);
+            StartCoroutine(SubscribeToEmailNotificationCoroutine(request, onComplete, SubscribeToEmailNotificationsError));
+        }
+
+        internal void PingTotals(string userId)
+        {
+            var request = certificateService.CreateImpactSummaryTotalsRequest(Configurations.Instance.TokenConfig.AppToken, userId);
+            StartCoroutine(PingTotalsCoroutine(request));
+        }
+
+        internal void PingProject(string userId)
+        {
+            var request = certificateService.CreateImpactSummaryTotalsRequest(Configurations.Instance.TokenConfig.AppToken, userId);
+            StartCoroutine(PingProjectCoroutine(request));
         }
         
         private void GetCertificatesListSuccess(CertificateResponse[] certificates)
@@ -76,15 +106,26 @@ namespace DotsEcoCertificateSDK
             CertificatesArray = certificates;
             OnGetCertificatesListSuccess?.Invoke(certificates);
         }
-        
+
         private void GetCertificatesListError(ErrorResponse errorResponse)
-        {
-            if (showLogs)
-            {
-                Debug.Log("Failed to load certificates list: " + errorResponse.message);
-            }
-            
+        {            
+            GenericErrorMessage("Failed to load certificates list", errorResponse);
             OnGetCertificatesListError?.Invoke();
+        }
+
+        private void SubscribeToEmailNotificationsError(ErrorResponse errorResponse) => GenericErrorMessage("Failed to subscribe to notifications", errorResponse);
+
+        private void ImpactTotalError(ErrorResponse errorResponse) => GenericErrorMessage("Failed to get total impact", errorResponse);
+
+        private void ImpactProjectError(ErrorResponse errorResponse) => GenericErrorMessage("Failed to get project impact", errorResponse);
+
+        private bool GenericErrorMessage(string header, ErrorResponse errorResponse)
+        {
+            if (showLogs == false)
+                return false;
+
+            Debug.Log(header + ": " + errorResponse.message);
+            return true;
         }
         
         private void DebugCertificatesList(CertificateResponse[] certificates)
@@ -174,6 +215,73 @@ namespace DotsEcoCertificateSDK
                 
                 onSuccess?.Invoke(CertificatesArray);
             }
+        }
+
+        private IEnumerator SubscribeToEmailNotificationCoroutine(UnityWebRequest request, Action<bool> onComplete, Action<ErrorResponse> onError)
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            {
+                var errorResponse = JsonUtility.FromJson<ErrorResponse>(request.downloadHandler.text);
+                onError?.Invoke(errorResponse);
+                onComplete?.Invoke(false);
+            }
+            else
+            {
+                string jsonResponse = request.downloadHandler.text;
+                Debug.Log(jsonResponse);
+                onComplete?.Invoke(true);
+                // CertificatesArray = JsonHelper.FromJson<>()
+            }
+        }
+
+        private IEnumerator SendImpactTotalCoroutine(UnityWebRequest request, Action<ErrorResponse> onError, Action<bool, ImpactSummaryTotalResponse> onComplete)
+        {
+            yield return request.SendWebRequest();
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            {
+                var errorResponse = JsonUtility.FromJson<ErrorResponse>(request.downloadHandler.text);
+                onError?.Invoke(errorResponse);
+                onComplete?.Invoke(false, null);
+            }
+            else
+            {
+                var jsonResponse = "{ \"Items\": " + request.downloadHandler.text + "}";
+                var response = JsonConvert.DeserializeObject<ImpactSummaryTotalResponse>(jsonResponse);
+                onComplete?.Invoke(true, response);
+            }
+        }
+
+        private IEnumerator SendImpactProjectCoroutine(UnityWebRequest request, Action<ErrorResponse> onError, Action<bool, ImpactSummaryProjectResponse> onComplete)
+        {
+            yield return request.SendWebRequest();
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+            {
+                var errorResponse = JsonUtility.FromJson<ErrorResponse>(request.downloadHandler.text);
+                onError?.Invoke(errorResponse);
+                onComplete?.Invoke(false, null);
+            }
+            else
+            {
+                var jsonResponse = "{ \"Items\": " + request.downloadHandler.text + "}";
+                var response = JsonConvert.DeserializeObject<ImpactSummaryProjectResponse>(jsonResponse);
+                onComplete?.Invoke(true, response);
+            }
+        }
+
+        private IEnumerator PingTotalsCoroutine(UnityWebRequest request)
+        {
+            yield return request.SendWebRequest();
+            Debug.Log(request.downloadHandler.text);
+            var response = JsonConvert.DeserializeObject<ImpactSummaryTotalResponse>("{ \"Items\": " + request.downloadHandler.text + "}");
+        }
+
+        private IEnumerator PingProjectCoroutine(UnityWebRequest request)
+        {
+            yield return request.SendWebRequest();
+            Debug.Log(request.downloadHandler.text);
+            var response = JsonConvert.DeserializeObject<ImpactSummaryProjectResponse>("{ \"Items\": " + request.downloadHandler.text + "}");
         }
     }
 }
